@@ -4,7 +4,7 @@ baseURL = "https://ruanrui-econ.github.io/"
 theme = "LoveIt"
 
 # 网站标题
-title = "Phyger's Site"
+title = "阮睿的个人主页"
 
 # 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
@@ -16,9 +16,9 @@ params.assets.disableFignerprinting = true
 
 # 作者配置
 [author]
-  name = "phyger"
-  email = "phygerr@gmail.com"
-  link = "https://www.u1s1.vip"
+  name = "阮睿"
+  email = "ruanrui@cufe.edu.cn"
+  #link = "https://www.u1s1.vip"
 
 # 菜单配置
 [menu]
