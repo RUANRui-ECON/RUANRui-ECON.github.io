@@ -72,7 +72,7 @@ params.assets.disableFignerprinting = true
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = "阮睿的个人主页"
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "阮睿的个人主页"
+      subtitle = ""
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
