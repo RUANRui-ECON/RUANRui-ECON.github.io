@@ -46,7 +46,7 @@
       logo = ""
       # title name
       # 标题名称
-      name = "My cool site"
+      name = "阮睿的个人主页"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
@@ -182,7 +182,7 @@
       title = ""
       # subtitle shown in home page
       # 主页显示的网站副标题
-      subtitle = "This is my cool site"
+      subtitle = "阮睿的个人主页"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
       typeit = true
