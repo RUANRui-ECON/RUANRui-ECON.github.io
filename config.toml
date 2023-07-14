@@ -1,4 +1,4 @@
-baseURL = "https://ruanrui-econ.github.io/"
+baseURL = "https://github.com/RUANRui-ECON/RUANRui-ECON.github.io"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -18,7 +18,7 @@ params.assets.disableFignerprinting = true
 [author]
   name = "阮睿"
   email = "ruanrui@cufe.edu.cn"
-  #link = "https://www.u1s1.vip"
+  link = "https://ruanrui-econ.github.io/"
 
 # 菜单配置
 [menu]
