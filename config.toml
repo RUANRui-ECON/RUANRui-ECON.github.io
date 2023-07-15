@@ -55,7 +55,7 @@ params.assets.disableFignerprinting = true
     pre = ""
     post = ""
     name = "关于"
-    url = "content/about.md"
+    url = "/content/about.md"
     title = ""
 
   # 主页配置
