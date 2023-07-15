@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "简历"
 date: 2023-07-15T06:54:52+08:00
 draft: false
 ---
