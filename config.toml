@@ -51,11 +51,11 @@ params.assets.disableFignerprinting = true
     title = ""
   [[menu.main]]
     weight = 1
-    identifier = "resume"
+    identifier = "about"
     pre = ""
     post = ""
     name = "简历"
-    url = "/content/resume.md"
+    url = "/about/"
     title = ""
 
   # 主页配置
