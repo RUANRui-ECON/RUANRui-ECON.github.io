@@ -1,4 +1,4 @@
-baseURL = "https://github.com/RUANRui-ECON/RUANRui-ECON.github.io"
+baseURL = "https://github.com/RUANRui-ECON/RUANRui-ECON.github.io/tree/main"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -30,7 +30,7 @@ params.assets.disableFignerprinting = true
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
     name = "文章"
-    url = "/posts/"
+    url = "content/posts/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
     title = ""
   [[menu.main]]
@@ -55,7 +55,7 @@ params.assets.disableFignerprinting = true
     pre = ""
     post = ""
     name = "关于"
-    url = "/about.md"
+    url = "content/about.md"
     title = ""
 
   # 主页配置
