@@ -66,7 +66,7 @@ params.assets.disableFignerprinting = true
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = "ruanruiphi@126.com"
+      gravatarEmail = "/assets/images/rr.jpg"
       # 主页显示头像的 URL
       avatarURL = ""
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
