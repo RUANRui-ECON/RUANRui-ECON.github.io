@@ -1,5 +1,4 @@
 ---
-
 title: "简历"
 date: 2023-07-17
 draft: false
@@ -9,7 +8,7 @@ featuredImagePreview: /images/远山.jpg
 
 ---
 
-## 阮睿
+# 阮睿
 
 ### 个人信息
 
