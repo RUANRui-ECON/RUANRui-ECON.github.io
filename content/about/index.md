@@ -1,11 +1,14 @@
 ---
+
 title: "简历"
 date: 2023-07-17
 draft: false
 summary: 阮睿的简历
 featuredImage: /images/远山.jpg
 featuredImagePreview: /images/远山.jpg
+
 ---
+
 ## 阮睿
 
 ### 个人信息
@@ -15,6 +18,10 @@ featuredImagePreview: /images/远山.jpg
 通信地址：北京市昌平区高教园中央财经大学沙河校区学院楼 10 号楼 133
 
 Office Hour: 周四下午14 : 00 - 17 : 00
+
+### 研究兴趣
+
+宏观经济政策沟通、企业对宏观经济政策的异质性感受、政府-企业之间的互动
 
 ### 工作经历
 
@@ -88,7 +95,7 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 #### 期刊论文评审
 
-《金融研究》、《经济理论与经济管理》、International Review of Economics and Finance匿名审稿专家。
+《金融研究》、《经济理论与经济管理》、International Review of Economics and Finance、International Review of Financial Analysis匿名审稿专家。
 
 ### 媒体评论
 
