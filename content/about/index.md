@@ -82,7 +82,7 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 #### 英文
 
-[2] Fang, M., Ruan, R. State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty. China & World Economy, Forthcoming.
+[2] Fang, M., Ruan, R.， State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty. China & World Economy, Forthcoming.
 
 [1] Zhou, H., Zhang, X., & Ruan, R. (2023). Firm's perception of economic policy uncertainty and corporate innovation efficiency. Journal of Innovation & Knowledge, 8(3), 100371.
 
@@ -90,10 +90,8 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 | 项目类别          | 课题名称                                                    | 时间               | 状态  |
 | ------------- |:------------------------------------------------------- | ---------------- | --- |
-| 国家自然科学基金青年项目  | 财政政策沟通、市场预期形成与宏观经济效应研究                                  | 2023年8月--        | 在研  |
+| 国家自然科学基金青年项目  | 财政政策沟通、市场预期形成与宏观经济效应研究（72303266）                        | 2023年8月--        | 在研  |
 | 博士后科学基金面上资助项目 | 财政政策和货币政策预期管理协调配合研究——基于财政—央行“双主体”货币调控机制的视角（2020M680836） | 2020年12月-2022年6月 | 已结项 |
-
-
 
 ### 教学成果
 
