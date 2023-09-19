@@ -6,6 +6,14 @@ summary: 阮睿的简历
 featuredImage: /images/远山.jpg
 featuredImagePreview: /images/远山.jpg
 
+
+resources:
+
+- name: featured-image
+  src: 惠州西湖.png
+- name: featured-image-preview
+  src: 惠州西湖.png
+
 ---
 
 # 阮睿
