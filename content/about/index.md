@@ -1,6 +1,6 @@
 ---
 title: "简历"
-date: 2023-08-25
+date: 2023-09-19
 draft: false
 summary: 阮睿的简历
 featuredImage: /images/远山.jpg
@@ -63,14 +63,15 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 #### 中文
 
+[9] 阮睿，孙榕，高秋男，王麒植，如何行政发包？——以省级政府目标驱动下的地方政府科技支出为例[J]. **财贸经济**，Forthcoming.
+
 [8] 张成思，孙宇辰，阮睿，经济政策不确定性、企业货币政策感知与实业投资[J]. **财贸经济**，2023(7):75-90.
 
 [7] 方明月，聂辉华，阮睿，沈昕毅. 企业数字化转型与经济政策不确定性感知[J]. **金融研究**，2023(2):21-39.
 
 [6] 张成思，孙宇辰，阮睿（通讯作者）. 企业宏观经济感知、货币政策与微观企业投融资行为 [J]. **经济研究**，2021(10):39-55.
 
-[5] 阮睿，孙宇辰，唐悦，聂辉华. 资本市场开放能否提高企业信息披露质量?——基于“沪港通”和年报文本挖掘的分析
-[J]. **金融研究**，2021(02):188-206. (**人大复印报刊资料**《投资与证券》2021年第6期全文转载，[**2021年国际金融学最佳中文论文TOP10**](https://mp.weixin.qq.com/s/Cn8xOjCRrmiFU0ekIlIi8w))
+[5] 阮睿，孙宇辰，唐悦，聂辉华. 资本市场开放能否提高企业信息披露质量?——基于“沪港通”和年报文本挖掘的分析[J]. **金融研究**，2021(02):188-206. (**人大复印报刊资料**《投资与证券》2021年第6期全文转载，[**2021年国际金融学最佳中文论文TOP10**](https://mp.weixin.qq.com/s/Cn8xOjCRrmiFU0ekIlIi8w))
 
 [4] 聂辉华，阮睿（通讯作者），宋佳义. 为了指标而竞争：来自中国煤矿企业的证据 [J]. **经济理论与经济管理**，2020(9):36-49.
 
@@ -82,7 +83,7 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 #### 英文
 
-[2] Fang, M., Ruan, R.， State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty. China & World Economy, Forthcoming.
+[2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115.
 
 [1] Zhou, H., Zhang, X., & Ruan, R. (2023). Firm's perception of economic policy uncertainty and corporate innovation efficiency. Journal of Innovation & Knowledge, 8(3), 100371.
 
@@ -117,4 +118,4 @@ Office Hour: 周四下午14 : 00 - 17 : 00
 
 #### 更新时间
 
-2023-08-25
+2023-09-19
