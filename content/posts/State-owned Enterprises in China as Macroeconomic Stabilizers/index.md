@@ -1,5 +1,4 @@
 ---
-
 title: "长摘要-国有企业的宏观经济稳定器功能"
 subtitle: China & World Economy
 date: 2023-09-127T14:20:13+08:00
@@ -14,7 +13,7 @@ resources:
 - name: featured-image
   src: pics-CWE202309.png
 - name: featured-image-preview
-  src: pics-CWE202309.png
+  src: pics-CWE202309-title.png
 
 ---
 
