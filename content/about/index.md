@@ -3,12 +3,8 @@ title: "简历"
 date: 2023-09-19
 draft: false
 summary: 阮睿的简历
-featuredImage: /images/远山.jpg
-featuredImagePreview: /images/远山.jpg
-
 
 resources:
-
 - name: featured-image
   src: 惠州西湖.png
 - name: featured-image-preview
