@@ -71,7 +71,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [8] 张成思，孙宇辰，阮睿，经济政策不确定性、企业货币政策感知与实业投资[J]. **财贸经济**，2023(7):75-90.
 
-[7] 方明月，聂辉华，阮睿，沈昕毅. 企业数字化转型与经济政策不确定性感知[J]. **金融研究**，2023(2):21-39.
+[7] 方明月，聂辉华，阮睿，沈昕毅. 企业数字化转型与经济政策不确定性感知[J]. **金融研究**，2023(2):21-39.（精华版在《改革内参》刊发）
 
 [6] 张成思，孙宇辰，阮睿（通讯作者）. 企业宏观经济感知、货币政策与微观企业投融资行为 [J]. **经济研究**，2021(10):39-55.
 
@@ -87,7 +87,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 #### 英文
 
-[2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115.
+[2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
 
 [1] Zhou, H., Zhang, X., & Ruan, R. (2023). Firm's perception of economic policy uncertainty and corporate innovation efficiency. Journal of Innovation & Knowledge, 8(3), 100371.
 
@@ -126,6 +126,46 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 ### 媒体评论
 
 [1] 《加强政策沟通，改善市场预期，增强政策效果》，《中国财经报》2023年4月11日第5版。
+
+
+
+### 会议
+
+第二十届中国金融学年会（2023，中央财经大学）
+
+第九届组织经济学研讨会（2023，南京大学）
+
+第二十二届中国经济学年会（2023，华南理工大学）
+
+第八届组织经济学研讨会（2021，山东大学）
+
+第三届中国发展理论国际年会（2021，中国人民大学）
+
+The Chinese Economists Society 2021 Annual Conference（2021，华中科技大学）
+
+首届中国微观经济理论论坛（2019，中国人民大学）
+
+第五届全国金融学博士生论坛（2019，暨南大学）
+
+第七届金融风险论坛（2019，首都经济贸易大学）
+
+第七届组织经济学年会（2019，华南师范大学）
+
+2019年齐鲁青年论坛（2019，山东大学）
+
+2019年中国世界经济学会年会（2019，吉林大学）
+
+首届中国宏观经济学者论坛（2019，复旦大学）
+
+第十四届香樟经济学论坛（2019，立信会计学院）
+
+2018年全国数量经济学博士生学术论坛（2018，东北财经大学）
+
+第六届组织经济学年会（2018，海南大学）
+
+第十八届中国青年经济学者论坛（2018，中国人民大学）
+
+
 
 #### 更新时间
 
