@@ -87,6 +87,8 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 #### 英文
 
+[3] Li, J., Nie, H., Ruan, R., Shen, X., (2023). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis. Forthcoming. 
+
 [2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
 
 [1] Zhou, H., Zhang, X., & Ruan, R. (2023). Firm's perception of economic policy uncertainty and corporate innovation efficiency. Journal of Innovation & Knowledge, 8(3), 100371.
@@ -127,8 +129,6 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [1] 《加强政策沟通，改善市场预期，增强政策效果》，《中国财经报》2023年4月11日第5版。
 
-
-
 ### 会议
 
 第二十届中国金融学年会（2023，中央财经大学）
@@ -165,8 +165,6 @@ The Chinese Economists Society 2021 Annual Conference（2021，华中科技大�
 
 第十八届中国青年经济学者论坛（2018，中国人民大学）
 
-
-
 #### 更新时间
 
-2023-09-26
+2023-10-25
