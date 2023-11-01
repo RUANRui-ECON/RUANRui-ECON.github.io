@@ -67,7 +67,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 #### 中文
 
-[9] 阮睿，孙榕，高秋男，王麒植，如何行政发包？——以省级政府目标驱动下的地方政府科技支出为例[J]. **财贸经济**，Forthcoming.
+[9] 阮睿，孙榕，高秋男，王麒植，如何行政发包？——以省级政府目标驱动下的地方政府科技支出为例[J]. **财贸经济**，2023(11):5-21.
 
 [8] 张成思，孙宇辰，阮睿，经济政策不确定性、企业货币政策感知与实业投资[J]. **财贸经济**，2023(7):75-90.
 
@@ -87,7 +87,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 #### 英文
 
-[3] Li, J., Nie, H., Ruan, R., Shen, X., (2023). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis. Forthcoming. 
+[3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis. International Review of Financial Analysis, 103022. 
 
 [2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
 
@@ -167,4 +167,4 @@ The Chinese Economists Society 2021 Annual Conference（2021，华中科技大�
 
 #### 更新时间
 
-2023-10-25
+2023-11-01
