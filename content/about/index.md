@@ -87,7 +87,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 #### 英文
 
-[3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis. International Review of Financial Analysis, 103022. 
+[3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis, 103022. 
 
 [2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
 
