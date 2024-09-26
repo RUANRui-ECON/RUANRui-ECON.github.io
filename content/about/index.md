@@ -1,7 +1,7 @@
 ---
 
 title: "简历"
-date: 2024-07-03
+date: 2024-09-26
 draft: false
 summary: 阮睿的简历
 
