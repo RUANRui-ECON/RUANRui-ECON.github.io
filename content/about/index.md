@@ -102,6 +102,18 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [1] Zhou, H., Zhang, X., & Ruan, R. (2023). Firm's perception of economic policy uncertainty and corporate innovation efficiency. Journal of Innovation & Knowledge, 8(3), 100371.
 
+# 工作论文
+
+[1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》
+
+[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?
+
+[3]《货币政策冲击、央行沟通与企业宏观经济感知》
+
+[4]《财政预算绩效管理改革公告和城投债信用利差》
+
+[5]《企业宏观经济感知与ESG表现》
+
 # 科研项目
 
 ### 主持纵向课题
