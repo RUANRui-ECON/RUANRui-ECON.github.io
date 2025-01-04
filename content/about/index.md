@@ -233,7 +233,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 ### 期刊论文评审
 
-《世界经济》《金融研究》《经济理论与经济管理》《当代财经》、International Review of Economics and Finance、International Review of Financial Analysis匿名审稿专家。
+《经济学（季刊）》《世界经济》《金融研究》《经济理论与经济管理》《财政研究》《当代财经》、International Review of Economics and Finance、International Review of Financial Analysis匿名审稿专家。
 
 # 媒体文章
 
@@ -303,4 +303,4 @@ The Chinese Economists Society 2021 Annual Conference（2021，华中科技大�
 
 #### 更新时间
 
-2024-12-25
+2025-01-04
