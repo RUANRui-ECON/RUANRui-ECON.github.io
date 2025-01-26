@@ -107,7 +107,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》正在返修（合作者：彭卓然、孙宇辰）
 
-[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?已投稿
+[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?已投稿 （with Ziyi Li, Yuchen Sun, Yue Tang）
 
 [3]《货币政策冲击、央行沟通与企业宏观经济感知》已投稿（合作者：孙宇辰、宫梓轩、张仁斌）
 
@@ -118,6 +118,8 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 [6]《内修与外迁——外部经贸冲击中的企业应对分化》已投稿（合作者：王麒植、叶芷）
 
 [7]《企业经济政策不确定性感知与货币政策有效性》已投稿（合作者：孙宇辰、敖志澔、张曦）
+
+[8] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
 # 科研项目
 
