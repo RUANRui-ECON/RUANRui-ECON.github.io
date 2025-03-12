@@ -121,7 +121,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [8] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
-# 科研项目
+# 科研项目  
 
 ### 主持纵向课题
 
@@ -307,4 +307,4 @@ The Chinese Economists Society 2021 Annual Conference（2021，华中科技大�
 第十八届中国青年经济学者论坛（2018，中国人民大学）
 
 #### 更新时间
-2025-03-07
+2025-03-12
