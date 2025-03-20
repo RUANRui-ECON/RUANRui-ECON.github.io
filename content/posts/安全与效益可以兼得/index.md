@@ -13,7 +13,6 @@ resources:
   src: pics-世界经济202503.jpg
 - name: featured-image-preview
   src: pic1.jpg
-  width: 800
 ---
 
 # 【研究动机】
