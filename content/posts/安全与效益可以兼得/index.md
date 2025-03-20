@@ -10,9 +10,9 @@ tags: ["政府治理","安全"]
 
 resources:
 - name: featured-image
-  src: pics-世界经济202503.png
+  src: pics-世界经济202503.jpg
 - name: featured-image-preview
-  src: pic1.png
+  src: pic1.jpg
   width: 800
 ---
 
