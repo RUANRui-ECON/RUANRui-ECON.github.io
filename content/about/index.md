@@ -93,7 +93,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [4] 聂辉华，阮睿（通讯作者），宋佳义. 为了指标而竞争：来自中国煤矿企业的证据 [J]. 经济理论与经济管理，2020(9):36-49.
 
-[3] 聂辉华，阮睿，沈吉. 企业经济政策不确定性感知、投资决策和金融资产配置 [J]. **世界经济**，2020(6):77-98.（[企业经济政策不确定性感知数据等资料](http://www.niehuihua.com/a/zuopin/521.html)）
+[3] 聂辉华，阮睿，沈吉. 企业经济政策不确定性感知、投资决策和金融资产配置 [J]. **世界经济**，2020(6):77-98.（封面文章）（[企业经济政策不确定性感知数据等资料](http://www.niehuihua.com/a/zuopin/521.html)）
 
 [2] 聂辉华，阮睿，宋佳义. 地方政府如何面对安全与增长的两难冲突？——来自煤矿关闭的证据 [J]. 山东大学学报（哲学社会科学版），2019(3):92-107. （ 新华文摘（网络版）全文转载，[澎湃新闻评论《面对安全与增长，地方政府如何取舍》](https://www.thepaper.cn/newsDetail_forward_4216234)）
 
@@ -101,7 +101,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 ### 英文
 
-[3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis, 103022.
+[3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis, 103022. (ESI前1%高被引)
 
 [2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
 
