@@ -109,7 +109,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 # 工作论文
 
-[1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》正在返修（合作者：彭卓然、孙宇辰）
+[1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》已返修（合作者：彭卓然、孙宇辰）
 
 [2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?  JCF R&R （with Ziyi Li, Yuchen Sun, Yue Tang）
 
