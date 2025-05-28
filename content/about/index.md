@@ -119,7 +119,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [5]《内修与外迁——外部经贸冲击中的企业应对分化》已投稿（合作者：王麒植、叶芷）
 
-[6]《企业经济政策不确定性感知与货币政策有效性》，《经济理论与经济管理》已返修（合作者：孙宇辰、敖志澔、张曦）
+[6]《企业经济政策不确定性感知与货币政策有效性》，《经济理论与经济管理》forthcoming（合作者：孙宇辰、敖志澔、张曦）
 
 [7] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
