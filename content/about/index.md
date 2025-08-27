@@ -74,9 +74,11 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 ### 中文
 
-[15] 阮睿, 谭雅馨. 实施积极财政政策筑牢高质量发展根基[J]. 山西财税, (03), 6-7.
+[16] 孙宇辰，张曦，敖志澔，阮睿（通讯作者）. 企业经济政策不确定性感知与货币政策有效性[J]，《经济理论与经济管理》，2025，（8）.
 
-[14] 阮睿,吴司锴,孙宇辰.财政预算绩效管理改革公告和城投债信用利差[J].财政研究,2024,(12):38-52.**（封面文章）**
+[15] 阮睿, 谭雅馨. 《实施积极财政政策筑牢高质量发展根基》[J]. 《山西财税》, (03), 6-7.
+
+[14] 阮睿,吴司锴,孙宇辰. 《财政预算绩效管理改革公告和城投债信用利差》[J].《财政研究》,2024,(12):38-52.**（封面文章）**
 
 [13] 聂辉华，桂林，阮睿（通讯作者）. 2025：《安全与效益可以兼得：来自中国煤炭行业的证据》， **《世界经济》** 第3期。**（封面文章）**
 
@@ -124,9 +126,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [5]《内修与外迁——外部经贸冲击中的企业应对分化》《经济研究》返修中（合作者：王麒植、叶芷）
 
-[6]《企业经济政策不确定性感知与货币政策有效性》，《经济理论与经济管理》forthcoming（合作者：孙宇辰、敖志澔、张曦）
-
-[7] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
+[6] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
 # 科研项目  
 
