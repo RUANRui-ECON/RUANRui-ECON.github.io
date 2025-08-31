@@ -11,8 +11,10 @@ languageCode = "zh-CN"
 # 语言名称 ["English", "简体中文", "Français", "Polski", ...]
 languageName = "简体中文"
 # 是否包括中日韩文字
-hasCJKLanguage = true
-params.assets.disableFignerprinting = true
+[params]
+  [params.assets]
+    disableFingerprinting = true
+    hasCJKLanguage = true
 
 # 作者配置
 [author]
