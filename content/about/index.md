@@ -116,7 +116,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 # 工作论文
 
-[1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》已返修（合作者：彭卓然、孙宇辰）
+[1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》forthcoming.（合作者：彭卓然、孙宇辰）
 
 [2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?  JCF R&R （with Ziyi Li, Yuchen Sun, Yue Tang）
 
@@ -126,7 +126,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [5]《内修与外迁——外部经贸冲击中的企业应对分化》《经济研究》返修中（合作者：王麒植、叶芷）
 
-[6] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China 已投稿 （with Zengrong Lin, Weiqi Huang, Yuchen Sun）
+[6] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China（with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
 # 科研项目  
 
