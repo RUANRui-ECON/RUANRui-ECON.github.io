@@ -1,7 +1,7 @@
 ---
 
 title: "简历"
-date: 2024-09-26
+date: 2025-12-07
 draft: false
 summary: 阮睿的简历
 
@@ -118,7 +118,7 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》forthcoming.（合作者：彭卓然、孙宇辰）
 
-[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?  JCF R&R （with Ziyi Li, Yuchen Sun, Yue Tang）
+[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?  JCF forthcoming（with Ziyi Li, Yuchen Sun, Yue Tang）
 
 [3]《货币政策冲击、央行沟通与企业宏观经济感知》，《管理世界》返修中（合作者：孙宇辰、宫梓轩、张仁斌）
 
@@ -227,6 +227,8 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 # 学术会议
 
+2025国际贸易争端与全球化重构——新国际经济学学术研讨会（2025，清华大学）
+
 2025 SHINE-YES-with-NO经济学嘉年华（2025，上海交通大学）
 
 第五届香樟财政学论坛（2025，中国人民大学）
@@ -294,4 +296,4 @@ The Chinese Economists Society 2021 Annual Conference（2021，华中科技大�
 第十八届中国青年经济学者论坛（2018，中国人民大学）
 
 #### 更新时间
-2025-09-30
+2025-11-19
