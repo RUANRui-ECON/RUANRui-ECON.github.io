@@ -24,7 +24,7 @@
             {{- dict "Source" (T "lunrLanguageLib") "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
         {{- end -}}
     {{- else if eq $search.type "algolia" -}}
-        {{- $source := $cdn.algoliasearchJS | default "lib/algoliasearch/algoliasearch-lite.umd.min.js" -}}
+        {{- $source := $cdn.algoliasearchJS | default "lib/algoliasearch/lite/browser.umd.js" -}}
         {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
         {{- $config = dict "type" "algolia" "algoliaIndex" $search.algolia.index "algoliaAppID" $search.algolia.appID "algoliaSearchKey" $search.algolia.searchKey | dict "search" | merge $config -}}
     {{- end -}}
@@ -43,25 +43,27 @@
 
 {{- /* lightgallery */ -}}
 {{- if $params.lightgallery -}}
-    {{- $source := $cdn.lightgalleryCSS | default "lib/lightgallery/lightgallery.min.css" -}}
+    {{- $source := $cdn.lightgalleryCSS | default "lib/lightgallery/css/lightgallery-bundle.min.css" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+    {{- if not $cdn.lightgalleryCSS -}}
+        {{- (resources.Get "lib/lightgallery/images/loading.gif").Publish -}}
+        {{- range resources.Match "lib/lightgallery/fonts/*" -}}
+            {{- .Publish -}}
+        {{- end -}}
+    {{- end -}}
     {{- $source := $cdn.lightgalleryJS | default "lib/lightgallery/lightgallery.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-    {{- $source := $cdn.lightgalleryThumbnailJS | default "lib/lightgallery/plugins/lg-thumbnail.min.js" -}}
+    {{- $source := $cdn.lightgalleryThumbnailJS | default "lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-    {{- $source := $cdn.lightgalleryZoomJS | default "lib/lightgallery/plugins/lg-zoom.min.js" -}}
+    {{- $source := $cdn.lightgalleryZoomJS | default "lib/lightgallery/plugins/zoom/lg-zoom.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- $config = dict "lightgallery" true | merge $config -}}
 {{- end -}}
 
-{{- $code := $params.code | default dict -}}
-{{- $config = cond (ne $code.maxShownLines nil) $code.maxShownLines 10 | dict "maxShownLines" | dict "code" | merge $config -}}
-
 {{- /* clipboard.js */ -}}
-{{- if ne $code.copy false -}}
+{{- if $params.code.copy | default true -}}
     {{- $source := $cdn.clipboardJS | default "lib/clipboard/clipboard.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-    {{- $config = T "copyToClipboard" | dict "copyTitle" | dict "code" | merge $config -}}
 {{- end -}}
 
 {{- /* Sharer.js */ -}}
@@ -88,18 +90,21 @@
 {{- if $math.enable -}}
     {{- $source := $cdn.katexCSS | default "lib/katex/katex.min.css" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+    {{- if not $cdn.katexCSS -}}
+        {{- range resources.Match "lib/katex/fonts/*" -}}
+            {{- .Publish -}}
+        {{- end -}}
+    {{- end -}}
     {{- $source := $cdn.katexJS | default "lib/katex/katex.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-    {{- $source := $cdn.katexAutoRenderJS | default "lib/katex/auto-render.min.js" -}}
+    {{- $source := $cdn.katexAutoRenderJS | default "lib/katex/contrib/auto-render.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- if $math.copyTex -}}
-        {{- $source := $cdn.katexCopyTexCSS | default "lib/katex/copy-tex.min.css" -}}
-        {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
-        {{- $source := $cdn.katexCopyTexJS | default "lib/katex/copy-tex.min.js" -}}
+        {{- $source := $cdn.katexCopyTexJS | default "lib/katex/contrib/copy-tex.min.js" -}}
         {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- end -}}
     {{- if $math.mhchem -}}
-        {{- $source := $cdn.katexMhchemJS | default "lib/katex/mhchem.min.js" -}}
+        {{- $source := $cdn.katexMhchemJS | default "lib/katex/contrib/mhchem.min.js" -}}
         {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- end -}}
     {{- $delimiters := slice (dict "left" "$$" "right" "$$" "display" true) (dict "left" "\\[" "right" "\\]" "display" true) -}}
@@ -125,7 +130,6 @@
 {{- if (.Scratch.Get "this").mermaid -}}
     {{- $source := $cdn.mermaidJS | default "lib/mermaid/mermaid.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-    {{- $_ := (resources.Get "lib/mermaid/mermaid.min.js.map").RelPermalink -}}
 {{- end -}}
 
 {{- /* ECharts */ -}}
@@ -152,9 +156,11 @@
     {{- /* APlayer */ -}}
     {{- $source := $cdn.aplayerCSS | default "lib/aplayer/APlayer.min.css" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
-    {{- $options := dict "targetPath" "lib/aplayer/dark.min.css" "enableSourceMap" true -}}
+    {{- $options := dict "targetPath" "lib/aplayer/dark.min.css" "outputStyle" "compressed" "enableSourceMap" true -}}
     {{- dict "Source" "lib/aplayer/dark.scss" "ToCSS" $options "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
-    {{- $source := $cdn.aplayerJS | default "lib/aplayer/APlayer.min.js" -}}
+    {{- /* To fix https://github.com/dillonzq/LoveIt/issues/869 */ -}}
+    {{- /* Local file from https://github.com/DIYgod/APlayer/pull/777, no CDN */ -}}
+    {{- $source := "lib/aplayer/APlayer.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
     {{- /* MetingJS */ -}}
@@ -185,7 +191,7 @@
 {{- with (.Scratch.Get "this").styleArr -}}
     {{- $content := delimit . "" -}}
     {{- $path := substr (md5 $content) 0 6 | printf "css/%v" -}}
-    {{- $options := printf "%v.min.css" $path | dict "targetPath" -}}
+    {{- $options := printf "%v.min.css" $path | dict "targetPath" | merge (dict "outputStyle" "compressed") -}}
     {{- dict "Content" $content "Path" (printf "%v.scss" $path) "ToCSS" $options | dict "Scratch" $.Scratch "Data" | partial "scratch/style.html" -}}
 {{- end -}}
 

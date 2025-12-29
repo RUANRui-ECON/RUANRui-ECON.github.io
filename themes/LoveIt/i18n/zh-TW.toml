@@ -52,13 +52,16 @@ other = "由 {{ .Hugo }} 強力驅動 | 主題 - {{ .Theme }}"
 
 # === partials/comment.html ===
 [valineLang]
-other = "zh-tw"
+other = "zh-TW"
 
 [valinePlaceholder]
 other = "你的評論 ..."
 
 [facebookLanguageCode]
 other = "zh_TW"
+
+[walineLang]
+other = "zh-TW"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
@@ -197,4 +200,7 @@ other = "更改"
 
 [deleted]
 other = "刪除"
+
+[deprecated]
+other = "棄用"
 # === shortcodes/version.html ===

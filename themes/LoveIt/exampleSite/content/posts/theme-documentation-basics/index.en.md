@@ -29,14 +29,12 @@ Discover what the Hugo - **LoveIt** theme is all about and the core-concepts beh
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.62.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest edition of [:(far fa-file-archive fa-fw): Hugo](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
-{{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/), this theme only supports Hugo versions above **0.62.0**.
-{{< /admonition >}}
+{{< admonition note "When you need to use Hugo extended edition?" false >}}
+When you want [style customization](#style-customization), you need to use the Hugo **extended edition** for correct rendering.
 
-{{< admonition tip "Hugo extended version is recommended" >}}
-Since some features of this theme need to processes :(fab fa-sass fa-fw): SCSS to :(fab fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
+![Hugo extended edition](hugo-extended-edition.png "Hugo extended edition")
 {{< /admonition >}}
 
 ## 2 Installation
@@ -54,9 +52,9 @@ cd my_website
 
 ### 2.2 Install the Theme
 
-The **LoveIt** theme’s repository is: [https://github.com/dillonzq/LoveIt](https://github.com/dillonzq/LoveIt).
+The **LoveIt** theme's repository is: [https://github.com/dillonzq/LoveIt](https://github.com/dillonzq/LoveIt).
 
-You can download the [latest release :(far fa-file-archive fa-fw): .zip file](https://github.com/dillonzq/LoveIt/releases) of the theme and extract it in the `themes` directory.
+You can download the [release :(far fa-file-archive fa-fw): .zip file](https://github.com/dillonzq/LoveIt/releases) of the theme and extract it in the `themes` directory.
 
 Alternatively, clone this repository to the `themes` directory:
 
@@ -70,6 +68,16 @@ Or, create an empty git repository and make this repository a submodule of your 
 git init
 git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 ```
+
+{{< admonition note "LoveIt theme's compatibility" >}}
+
+| LoveIt branch or version | Supported Hugo versions |
+|:-------------------------|:-----------------------:|
+| master(Unstable)         |        ≥ 0.128.0        |
+| **0.3.X(Recommended)**   |    0.128.0 - 0.145.0    |
+| 0.2.X(Outdated)          |    0.68.0 - 0.127.0     |
+
+{{< /admonition >}}
 
 ### 2.3 Basic Configuration {#basic-configuration}
 
@@ -88,12 +96,6 @@ title = "My New Hugo Site"
 languageCode = "en"
 # language name ["English", "简体中文", "Français", "Polski", ...]
 languageName = "English"
-
-# Author config
-[author]
-  name = "xxxx"
-  email = ""
-  link = ""
 
 # Menu config
 [menu]
@@ -134,7 +136,7 @@ languageName = "English"
 ```
 
 {{< admonition >}}
-When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (**config.toml**) and set the theme as the default.
+When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (**hugo.toml**) and set the theme as the default.
 {{< /admonition >}}
 
 ### 2.4 Create Your First Post
@@ -174,6 +176,7 @@ it is highly recommended that you add `--disableFastRender` parameter to `hugo s
 ```bash
 hugo serve --disableFastRender
 ```
+
 {{< /admonition >}}
 
 ### 2.6 Build the Website
@@ -195,11 +198,75 @@ Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deploymen
 
 ### 3.1 Site Configuration {#site-configuration}
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **LoveIt** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
+In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **LoveIt** lets you define the following parameters in your site configuration (here is a `hugo.toml`, whose values are default).
 
 Please open the code block below to view the complete sample configuration :(far fa-hand-point-down fa-fw)::
 
 ```toml
+baseURL = "http://example.org/"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+# website title
+title = "My New Hugo Site"
+
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage = false
+
+# copyright description used only for seo schema
+copyright = ""
+
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
+
+# ignore some build errors
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# Pagination config
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = "page"
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+
 [params]
   # site default theme ["auto", "light", "dark"]
   defaultTheme = "auto"
@@ -216,6 +283,12 @@ Please open the code block below to view the complete sample configuration :(far
   description = "This is my cool site"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
+
+# Author config
+  [params.author]
+    name = "xxxx"
+    email = ""
+    link = ""
 
   # Header config
   [params.header]
@@ -322,7 +395,7 @@ Please open the code block below to view the complete sample configuration :(far
       avatarURL = "/images/avatar.png"
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
       title = ""
-      # subtitle shown in home page
+      # subtitle shown in home page (HTML format is supported)
       subtitle = "This is My New Hugo Site"
       # whether to use typeit animation for subtitle
       typeit = true
@@ -343,7 +416,8 @@ Please open the code block below to view the complete sample configuration :(far
   [params.social]
     GitHub = "xxxx"
     Linkedin = ""
-    Twitter = "xxxx"
+    X = "xxxx" # {{< version 0.3.1 >}}
+    Twitter = "" # {{< version 0.3.1 deprecated >}}
     Instagram = "xxxx"
     Facebook = "xxxx"
     Telegram = "xxxx"
@@ -403,6 +477,23 @@ Please open the code block below to view the complete sample configuration :(far
     XMPP = ""
     Matrix = ""
     Bilibili = ""
+    Discord = ""
+    DiscordInvite = ""
+    Lichess = ""
+    ORCID = ""
+    Pleroma = ""
+    Kaggle = ""
+    MediaWiki = ""
+    Plume = ""
+    HackTheBox = ""
+    RootMe = ""
+    Malt = "" # {{< version 0.3.0 >}}
+    TikTok = "" # {{< version 0.3.0 >}}
+    TryHackMe = "" # {{< version 0.3.0 >}}
+    Codeberg = "" # {{< version 0.3.0 >}}
+    HuggingFace = "" # {{< version 0.3.1 >}}
+    Threads = "" # {{< version 0.3.1 >}}
+    Phone = ""
     Email = "xxxx@xxxx.com"
     RSS = true # {{< version 0.2.0 >}}
 
@@ -431,7 +522,7 @@ Please open the code block below to view the complete sample configuration :(far
       # whether to enable the table of the contents
       enable = true
       # {{< version 0.2.9 >}} whether to keep the static table of the contents in front of the post
-      keepStatic = true
+      keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       auto = true
     # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas
@@ -472,7 +563,9 @@ Please open the code block below to view the complete sample configuration :(far
     # {{< version 0.2.0 changed >}} social share links in post page
     [params.page.share]
       enable = true
-      Twitter = true
+      X = true # {{< version 0.3.1 >}}
+      Twitter = false # {{< version 0.3.1 deprecated >}}
+      Threads = true # {{< version 0.3.1 >}}
       Facebook = true
       Linkedin = false
       Whatsapp = false
@@ -494,7 +587,9 @@ Please open the code block below to view the complete sample configuration :(far
       Evernote = false
       Skype = false
       Trello = false
+      Diaspora = true # {{< version 0.3.1 >}}
       Mix = false
+      Telegram = true # {{< version 0.3.1 >}}
     # {{< version 0.2.0 changed >}} Comment config
     [params.page.comment]
       enable = false
@@ -521,6 +616,7 @@ Please open the code block below to view the complete sample configuration :(far
         avatar = "mp"
         meta= ""
         pageSize = 10
+        # automatically adapt the current theme i18n configuration when empty
         lang = ""
         visitor = true
         recordIP = true
@@ -529,9 +625,9 @@ Please open the code block below to view the complete sample configuration :(far
         serverURLs = ""
         # {{< version 0.2.6 >}} emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # located in "themes/LoveIt/assets/data/emoji/" directory
+        # located in "themes/LoveIt/assets/lib/valine/emoji/" directory
         # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
+        # "assets/lib/valine/emoji/"
         emoji = ""
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config
       [params.page.comment.facebook]
@@ -539,6 +635,7 @@ Please open the code block below to view the complete sample configuration :(far
         width = "100%"
         numPosts = 10
         appId = ""
+        # automatically adapt the current theme i18n configuration when empty
         languageCode = ""
       # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram comments" >}} config
       [params.page.comment.telegram]
@@ -553,7 +650,7 @@ Please open the code block below to view the complete sample configuration :(far
       # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} comment config
       [params.page.comment.commento]
         enable = false
-      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "Utterances" >}} comment config
+      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "utterances" >}} comment config
       [params.page.comment.utterances]
         enable = false
         # owner/repo
@@ -562,6 +659,23 @@ Please open the code block below to view the complete sample configuration :(far
         label = ""
         lightTheme = "github-light"
         darkTheme = "github-dark"
+      # giscus comment config (https://giscus.app/)
+      [params.page.comment.giscus]
+        # You can refer to the official documentation of giscus to use the following configuration.
+        enable = false
+        repo = ""
+        repoId = ""
+        category = "Announcements"
+        categoryId = ""
+        # automatically adapt the current theme i18n configuration when empty
+        lang = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
     # {{< version 0.2.7 >}} Third-party library config
     [params.page.library]
       [params.page.library.css]
@@ -611,17 +725,26 @@ Please open the code block below to view the complete sample configuration :(far
 
   # {{< version 0.2.0 >}} Analytics config
   [params.analytics]
-    enable = false
+    # {{< version 0.3.1 deleted >}}
+    enable = true
     # Google Analytics
     [params.analytics.google]
       id = ""
-      # whether to anonymize IP
+      # {{< version 0.3.1 deleted >}} whether to anonymize IP
       anonymizeIP = true
+      # {{< version 0.3.1 >}} whether to respect the browser’s “do not track” setting
+      respectDoNotTrack = false
     # Fathom Analytics
     [params.analytics.fathom]
       id = ""
       # server url for your tracker if you're self hosting
       server = ""
+    # Plausible Analytics
+    [params.analytics.plausible]
+      dataDomain = ""
+    # Yandex Metrica
+    [params.analytics.yandexMetrica]
+      id = ""
 
   # {{< version 0.2.7 >}} Cookie consent config
   [params.cookieconsent]
@@ -690,13 +813,13 @@ Please open the code block below to view the complete sample configuration :(far
 
 # {{< link "https://gohugo.io/about/hugo-and-gdpr/" "Privacy config" >}}
 [privacy]
-  # {{< version 0.2.0 deleted >}} privacy of the Google Analytics (replaced by params.analytics.google)
+  # {{< version 0.3.1 changed >}} privacy of the Google Analytics (can also be configured in params.analytics.google)
   [privacy.googleAnalytics]
     # ...
   [privacy.twitter]
-    enableDNT = true
+    # ...
   [privacy.youtube]
-    privacyEnhanced = true
+    # ...
 
 # Options to make output .md files
 [mediaTypes]
@@ -716,7 +839,6 @@ Please open the code block below to view the complete sample configuration :(far
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
 ```
 
 {{< admonition >}}
@@ -794,11 +916,12 @@ into `/static`. They’re easily created via [https://realfavicongenerator.net/]
 
 Customize `browserconfig.xml` and `site.webmanifest` to set theme-color and background-color.
 
-### 3.3 Style Customization
+### 3.3 Style Customization {#style-customization}
 
 {{< version 0.2.8 changed >}}
 
-{{< admonition >}}
+{{< admonition note "Hugo extended version is necessary" >}}
+Since Hugo need to processes :(fab fa-sass fa-fw): SCSS to :(fab fa-css3 fa-fw): CSS,
 Hugo **extended** version is necessary for the style customization.
 {{< /admonition >}}
 
@@ -827,22 +950,32 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 
 {{< version 0.2.10 changed >}}
 
-| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
-|:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
-| English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Traditional Chinese  | `zh-tw`   | `zh-TW`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Romanian             | `ro`      | `ro`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Vietnamese           | `vi`      | `vi`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Language            | Hugo Code | HTML `lang` Attribute |          Theme Docs           |        Lunr.js Support        |
+|:--------------------|:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
+| English             |   `en`    |         `en`          | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| Simplified Chinese  |  `zh-cn`  |        `zh-CN`        | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| Traditional Chinese |  `zh-tw`  |        `zh-TW`        |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| French              |   `fr`    |         `fr`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Polish              |   `pl`    |         `pl`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Portuguese (Brazil) |  `pt-br`  |        `pt-BR`        |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Italian             |   `it`    |         `it`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Spanish             |   `es`    |         `es`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| German              |   `de`    |         `de`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| German              |   `de`    |         `de`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Serbian             |   `sr`    |         `sr`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Russian             |   `ru`    |         `ru`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Romanian            |   `ro`    |         `ro`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Vietnamese          |   `vi`    |         `vi`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Arabic              |   `ar`    |         `ar`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Catalan             |   `ca`    |         `ca`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Thai                |   `th`    |         `th`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Telugu              |   `te`    |         `te`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Indonesian          |   `id`    |         `id`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Turkish             |   `tr`    |         `tr`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Korean              |   `ko`    |         `ko`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Hindi               |   `hi`    |         `hi`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
+| Dutch               |   `nl`    |         `nl`          |    :(far fa-square fa-fw):    | :(far fa-check-square fa-fw): |
+| Bengali             |   `hi`    |         `hi`          |    :(far fa-square fa-fw):    |    :(far fa-square fa-fw):    |
 
 ### 4.2 Basic Configuration
 

@@ -1,9 +1,9 @@
-# LoveIt Theme | Hugo [![Netlify Status](https://api.netlify.com/api/v1/badges/e60303f2-862c-4342-bf59-7c9adb10812e/deploy-status)](https://app.netlify.com/sites/hugo-loveit/deploys)
+# LoveIt Theme | Hugo
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.62.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.128.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dillonzq_LoveIt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=dillonzq_LoveIt)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e60303f2-862c-4342-bf59-7c9adb10812e/deploy-status)](https://app.netlify.com/sites/hugo-loveit/deploys)
 [![CircleCI](https://circleci.com/gh/dillonzq/LoveIt/tree/master.svg?style=svg)](https://circleci.com/gh/dillonzq/LoveIt/tree/master)
 
 English README | [简体中文说明](https://github.com/dillonzq/LoveIt/blob/master/README.zh-cn.md)
@@ -65,6 +65,8 @@ I hope you will LoveIt ❤️!
 * Optimized SEO performance with a correct **SEO SCHEMA** based on JSON-LD
 * **[Google Analytics](https://analytics.google.com/analytics)** supported
 * **[Fathom Analytics](https://usefathom.com/)** supported
+* **[Plausible Analytics](https://plausible.io/)** supported
+* **[Yandex Metrica](https://metrica.yandex.com/)** supported
 * Search engine **verification** supported (Google, Bind, Yandex and Baidu)
 * **CDN** for third-party libraries supported
 * Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
@@ -83,15 +85,16 @@ I hope you will LoveIt ❤️!
 
 * **Gravatar** supported by [Gravatar](https://gravatar.com)
 * Local **Avatar** supported
-* Up to **64** social links supported
-* Up to **24** share sites supported
+* Up to **81** social links supported
+* Up to **27** share sites supported
 * **Disqus** comment system supported by [Disqus](https://disqus.com)
 * **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
 * **Valine** comment system supported by [Valine](https://valine.js.org/)
 * **Facebook comments** system supported by [Facebook](https://developers.facebook.com/docs/plugins/comments/)
 * **Telegram comments** system supported by [Telegram Comments](https://comments.app/)
 * **Commento** comment system supported by [Commento](https://commento.io/)
-* **Utterances** comment system supported by [Utterances](https://utteranc.es/)
+* **utterances** comment system supported by [utterances](https://utteranc.es/)
+* **giscus** comment system supported by [giscus](https://giscus.app/)
 
 ### Extended Features
 
@@ -114,6 +117,7 @@ I hope you will LoveIt ❤️!
 * **Custom script** shortcode
 * **Animated typing** supported by [TypeIt](https://typeitjs.com/)
 * **Cookie consent banner** supported by [cookieconsent](https://github.com/osano/cookieconsent)
+* **Person** shortcode
 * ...
 
 ## [Documentation](https://hugoloveit.com/categories/documentation/)
@@ -124,6 +128,14 @@ Build Documentation Locally:
 hugo server --source=exampleSite
 ```
 
+## Compatibility
+
+| LoveIt branch or version | Supported Hugo versions |
+|:-------------------------|:-----------------------:|
+| master(Unstable)         |        ≥ 0.128.0        |
+| **0.3.X(Recommended)**   |    0.128.0 - 0.145.0    |
+| 0.2.X(Outdated)          |    0.68.0 - 0.127.0     |
+
 ## Multilingual and i18n
 
 LoveIt supports the following languages:
@@ -133,7 +145,7 @@ LoveIt supports the following languages:
 * Traditional Chinese
 * French
 * Polish
-* Brazilian Portuguese
+* Portuguese (Brazil)
 * Italian
 * Spanish
 * German
@@ -141,6 +153,16 @@ LoveIt supports the following languages:
 * Russian
 * Romanian
 * Vietnamese
+* Arabic
+* Catalan
+* Thai
+* Telugu
+* Indonesian
+* Turkish
+* Korean
+* Hindi
+* Dutch
+* Bengali
 * [Contribute with a new language](https://github.com/dillonzq/LoveIt/pulls)
 
 [Languages Compatibility](https://hugoloveit.com/theme-documentation-basics/#language-compatibility)
@@ -159,7 +181,7 @@ LoveIt is licensed under the **MIT** license. Check the [LICENSE file](https://g
 
 Thanks to the authors of following resources included in the theme:
 
-* [normalize.css](https://github.com/necolas/normalize.css)
+* [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 * [Font Awesome](https://fontawesome.com/)
 * [Simple Icons](https://github.com/simple-icons/simple-icons)
 * [Animate.css](https://daneden.github.io/animate.css/)

@@ -167,7 +167,13 @@
       }
     }
 
-    .table-wrapper {
+    table {
+      width: 100%;
+      max-width: 100%;
+      margin: .625rem 0;
+      border-spacing: 0;
+      background: $table-background-color;
+      border-collapse: collapse;
       overflow-x: auto;
 
       &::-webkit-scrollbar {
@@ -178,33 +184,24 @@
         }
       }
 
-      > table {
-        width: 100%;
-        max-width: 100%;
-        margin: .625rem 0;
-        border-spacing: 0;
-        background: $table-background-color;
-        border-collapse: collapse;
+      [theme=dark] & {
+        background: $table-background-color-dark;
+      }
+
+      thead {
+        background: $table-thead-color;
 
         [theme=dark] & {
-          background: $table-background-color-dark;
+          background-color: $table-thead-color-dark;
         }
+      }
 
-        thead {
-          background: $table-thead-color;
+      th, td {
+        padding: .3rem 1rem;
+        border: 1px solid darken($table-thead-color, 2%);
 
-          [theme=dark] & {
-            background-color: $table-thead-color-dark;
-          }
-        }
-
-        th, td {
-          padding: .3rem 1rem;
-          border: 1px solid darken($table-thead-color, 2%);
-
-          [theme=dark] & {
-            border-color: darken($table-thead-color-dark, 2%);
-          }
+        [theme=dark] & {
+          border-color: darken($table-thead-color-dark, 2%);
         }
       }
     }
@@ -212,6 +209,7 @@
     img {
       max-width: 100%;
       min-height: 1em;
+      height: auto;
     }
 
     figure {
@@ -230,19 +228,10 @@
 
       img {
         display: block;
-        width: 100%;
         height: auto;
         margin: 0 auto;
         overflow: hidden;
       }
-    }
-
-    .lazyload, .lazyloading {
-      @include object-fit(scale-down);
-    }
-
-    .lazyloaded {
-      @include object-fit(fill);
     }
 
     blockquote {
@@ -271,6 +260,7 @@
     }
 
     @import "../_partial/_single/code";
+    @import "../_partial/_single/gist";
     @import "../_partial/_single/instagram";
     @import "../_partial/_single/admonition";
     @import "../_partial/_single/echarts";
@@ -298,7 +288,7 @@
       @include border-radius(3px);
       @include box-shadow(inset 0 -1px 0 $global-border-color);
       font-size: .8rem;
-      font-family: $code-font-family;
+      font-family: var(--code-font-family);
       color: $code-color;
 
       [theme=dark] & {
@@ -314,6 +304,16 @@
       height: 1.25em;
       vertical-align: text-bottom;
     }
+
+    .person-mention.h-card {
+      display: inline-block;
+      img {
+        vertical-align: -12%;
+        max-height: 1.1em;
+        margin-right: 0;
+        border-radius: 50%;
+      }
+    }
   }
 
   @import "../_partial/_single/footer";
@@ -324,16 +324,16 @@
   .highlight {
     padding: .375rem;
     font-size: .875rem;
-    font-family: $code-font-family;
+    font-family: var(--code-font-family);
     font-weight: bold;
     word-break: break-all;
     white-space: pre-wrap;
   }
 
-  --ti-cursor-font-family: $global-font-family;
-  --ti-cursor-font-size: $global-font-size;
-  --ti-cursor-font-weight: $global-font-weight;
-  --ti-cursor-line-height: $global-line-height;
+  --ti-cursor-font-family: var(--global-font-family);
+  --ti-cursor-font-size: var(--global-font-size);
+  --ti-cursor-font-weight: var(--global-font-weight);
+  --ti-cursor-line-height: var(--global-line-height);
   --ti-cursor-color: $global-font-secondary-color;
   --ti-cursor-margin-left: 0;
 
