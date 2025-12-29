@@ -6,8 +6,7 @@ draft: false
 author: 聂辉华 阮睿 沈吉
 summary: 首次构建中国的企业级经济政策不确定性指数。
 categories: ["长摘要"]
-tags: ["不确定性","经济政策不确定性","企业投资"]
-research: ['经济政策不确定性']
+tags: ["不确定性","经济政策不确定性感知","企业投资"]
 
 resources:
 - name: featured-image

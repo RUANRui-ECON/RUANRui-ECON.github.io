@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>货币政策 - Tag - 阮睿的个人主页</title>
+        <link>http://localhost:1313/tags/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96/</link>
+        <description>货币政策 - Tag - 阮睿的个人主页</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
+            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Sun, 10 Aug 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96/" rel="self" type="application/rss+xml" /><item>
+    <title>经济政策不确定性感知与货币政策有效性</title>
+    <link>http://localhost:1313/research/%E7%BB%8F%E6%B5%8E%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E6%9C%89%E6%95%88%E6%80%A7/</link>
+    <pubDate>Sun, 10 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/research/%E7%BB%8F%E6%B5%8E%E6%94%BF%E7%AD%96%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E6%9C%89%E6%95%88%E6%80%A7/</guid>
+    <description><![CDATA[<h1 id="研究问题">研究问题</h1>
+<p>宽松货币政策能否有效刺激企业投资？这个问题的答案取决于企业如何感知政策环境。本文基于2007-2020年中国A股上市公司数据，利用年报文本分析构建企业级经济政策不确定性感知指数，探讨微观主体的主观感知如何影响货币政策传导效果。</p>]]></description>
+</item>
+<item>
+    <title>长摘要-宏观经济感知、货币政策与微观企业投融资行为</title>
+    <link>http://localhost:1313/research/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%84%9F%E7%9F%A5%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8E%E5%BE%AE%E8%A7%82%E4%BC%81%E4%B8%9A%E6%8A%95%E8%9E%8D%E8%B5%84%E8%A1%8C%E4%B8%BA/</link>
+    <pubDate>Sat, 15 Jul 2023 14:20:13 &#43;0800</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/research/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%84%9F%E7%9F%A5%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8E%E5%BE%AE%E8%A7%82%E4%BC%81%E4%B8%9A%E6%8A%95%E8%9E%8D%E8%B5%84%E8%A1%8C%E4%B8%BA/</guid>
+    <description><![CDATA[仅企业宏观经济预期指数显著影响企业投融资行为，而企业宏观经济回顾指数则没有相应效果。这表明，企业宏观经济感知中主要是预期成分发挥作用。]]></description>
+</item>
+</channel>
+</rss>
