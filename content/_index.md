@@ -1,7 +1,13 @@
-邮箱地址：[ruanrui@cufe.edu.cn](mailto:ruanrui@cufe.edu.cn)
+<div style="text-align: left; max-width: 800px; margin: 0 auto;">
 
-通信地址：北京市昌平区高教园中央财经大学沙河校区学院楼 10 号楼 133
+**邮箱地址：** [ruanrui@cufe.edu.cn](mailto:ruanrui@cufe.edu.cn)
 
-Office Hour: 周二下午14 : 00 - 17 : 00
+**通信地址：** 北京市昌平区高教园中央财经大学沙河校区学院楼 10 号楼 133
 
-![](IMG_20251019_151933.jpg)
+**Office Hour:** 周二下午14:00 - 17:00
+
+<br>
+
+<img src="IMG_20251019_151933.jpg" alt="校园照片" style="max-width: 800px; width: 100%; height: auto; border-radius: 8px; margin-top: 20px;">
+
+</div>
