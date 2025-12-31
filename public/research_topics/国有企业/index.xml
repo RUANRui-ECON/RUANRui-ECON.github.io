@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>国有企业 - research_topics - 阮睿的个人主页</title>
+        <link>http://localhost:1313/research_topics/%E5%9B%BD%E6%9C%89%E4%BC%81%E4%B8%9A/</link>
+        <description>国有企业 - research_topics - 阮睿的个人主页</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
+            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Tue, 26 Sep 2023 14:20:13 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/research_topics/%E5%9B%BD%E6%9C%89%E4%BC%81%E4%B8%9A/" rel="self" type="application/rss+xml" /><item>
+    <title>长摘要-国有企业的宏观经济稳定器功能</title>
+    <link>http://localhost:1313/posts/state-owned-enterprises-in-china-as-macroeconomic-stabilizers/</link>
+    <pubDate>Tue, 26 Sep 2023 14:20:13 &#43;0800</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/posts/state-owned-enterprises-in-china-as-macroeconomic-stabilizers/</guid>
+    <description><![CDATA[要从宏观经济稳定运行的角度认识国有企业的作用。]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>安全 - Tag - 阮睿的个人主页</title>
+        <link>http://localhost:1313/tags/%E5%AE%89%E5%85%A8/</link>
+        <description>安全 - Tag - 阮睿的个人主页</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
+            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Thu, 20 Mar 2025 12:06:13 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AE%89%E5%85%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>长摘要-安全和效益可以兼得</title>
+    <link>http://localhost:1313/posts/%E5%AE%89%E5%85%A8%E4%B8%8E%E6%95%88%E7%9B%8A%E5%8F%AF%E4%BB%A5%E5%85%BC%E5%BE%97/</link>
+    <pubDate>Thu, 20 Mar 2025 12:06:13 &#43;0800</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/posts/%E5%AE%89%E5%85%A8%E4%B8%8E%E6%95%88%E7%9B%8A%E5%8F%AF%E4%BB%A5%E5%85%BC%E5%BE%97/</guid>
+    <description><![CDATA[长期以来，传统认知普遍认为企业增加安全投入会推高生产成本、挤压利润空间，形成安全与效益的非此即彼关系。然而，进入21世纪以来，我国煤炭行业却呈现出安全绩效高与经济效益高并存的“双高”现象。这一现象不仅打破了安全与效益的二元对立范式，更为我们破解“统筹发展与安全”的实践难题提供了重要研究样本。]]></description>
+</item>
+</channel>
+</rss>
