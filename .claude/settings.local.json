@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(hugo:*)",
+      "Bash(timeout /t 3 /nobreak)",
+      "Bash(rm:*)"
+    ]
+  }
+}

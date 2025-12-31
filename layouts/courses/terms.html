@@ -1,0 +1,46 @@
+{{- define "title" -}}
+    {{- .Params.Title | default "教学" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    {{- $terms := .Data.Terms.ByCount -}}
+    {{- $type := .Type -}}
+
+    <div class="page archive">
+        {{- /* Title */ -}}
+        <h2 class="single-title animate__animated animate__pulse animate__faster">
+            {{- .Params.Title | default "教学" -}}
+        </h2>
+
+        {{- /* Courses Display */ -}}
+        <div class="categories-card">
+            {{- range $terms -}}
+                {{- $term := .Term -}}
+                {{- $pages := .Pages -}}
+                {{- with $.Site.GetPage "taxonomy" (printf "%v/%v" $type $term) -}}
+                <div class="card-item">
+                    <div class="card-item-wrapper">
+                        <h3 class="card-item-title">
+                            <a href="{{ .RelPermalink }}">
+                                <i class="fas fa-chalkboard-teacher fa-fw" aria-hidden="true"></i>&nbsp;{{ .Page.Title }}
+                            </a>
+                        </h3>
+                        {{- range first 10 $pages -}}
+                            <article class="archive-item">
+                                <a href="{{ .RelPermalink }}" class="archive-item-link">
+                                    {{- .Title | emojify -}}
+                                </a>
+                            </article>
+                        {{- end -}}
+                        {{- if gt (len $pages) 10 -}}
+                            <span class="more-post">
+                                <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
+                            </span>
+                        {{- end -}}
+                    </div>
+                </div>
+                {{- end -}}
+            {{- end -}}
+        </div>
+    </div>
+{{- end -}}
