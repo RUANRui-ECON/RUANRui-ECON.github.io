@@ -108,6 +108,8 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 ### 英文
 
+[4] Li, Z., Ruan, R., Sun, Y., & Tang, Y. (2026). [New event and old antidote: Can ex-ante disclosure mitigate regulatory risk?](https://doi.org/10.1016/j.jcorpfin.2025.102936), Journal of Corporate Finance, 98(03), 102936.
+
 [3] Li, J., Nie, H., Ruan, R., Shen, X., (2024). Subjective Perception of Economic Policy Uncertainty and Corporate Social Responsibility: Evidence from China.,  lnternational Review of Financial Analysis, 103022. (**ESI前1%高被引**)
 
 [2] Fang, M., Ruan, R. (2023). [State-owned Enterprises in China as Macroeconomic Stabilizers: Their Special Function in Times of Economic Policy Uncertainty](http://dx.doi.org/10.1111/cwe.12503). China & World Economy, 31(5), 87-115. ([中国与世界经济英文刊公众号《中国国有企业的“宏观经济稳定器”作用》](https://mp.weixin.qq.com/s/8R9rOPKH2gLHiRzOFpyK2Q))
@@ -118,15 +120,10 @@ Office Hour: 周二下午14 : 00 - 17 : 00
 
 [1]《宏观经济政策沟通的预期管理效应——来自国新办新闻发布会的证据》，《世界经济》forthcoming.（合作者：彭卓然、孙宇辰）
 
-[2] New Event and Old Antidote: Can Ex-Ante Disclosure Mitigate Regulatory Risk?  JCF forthcoming（with Ziyi Li, Yuchen Sun, Yue Tang）
+[2]《货币政策冲击、央行沟通与企业宏观经济感知》，《管理世界》返修中（合作者：孙宇辰、宫梓轩、张仁斌）
 
-[3]《货币政策冲击、央行沟通与企业宏观经济感知》，《管理世界》返修中（合作者：孙宇辰、宫梓轩、张仁斌）
+[3]《内修与外迁——外部经贸冲击中的企业应对分化》《经济研究》返修中（合作者：王麒植、叶芷）
 
-[4]《企业宏观经济感知与ESG表现》，已投稿（合作者：董辰一、李靖、孙宇辰）
-
-[5]《内修与外迁——外部经贸冲击中的企业应对分化》《经济研究》返修中（合作者：王麒植、叶芷）
-
-[6] The Role of Fiscal Communication in Stabilizing Stock Market Volatility: Evidence from China（with Zengrong Lin, Weiqi Huang, Yuchen Sun）
 
 # 科研项目  
 
