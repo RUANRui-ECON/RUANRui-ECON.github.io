@@ -6,6 +6,12 @@ tags: ["评论"]
 teaching: [""]
 categories: ["评论"]
 description: "一个用选择替代热爱的时代，如何系统性地制造出既焦虑又无所适从的年轻人。"
+
+
+resources:
+- name: featured-image-preview
+  src: zhangxue.jpg
+  width: 800
 ---
 
 # 同一个星期，两个张雪
