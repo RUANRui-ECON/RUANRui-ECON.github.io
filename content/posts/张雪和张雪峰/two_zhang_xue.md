@@ -9,6 +9,8 @@ description: "一个用选择替代热爱的时代，如何系统性地制造出
 
 
 resources:
+- name: featured-image
+  src: zhangxue.jpg
 - name: featured-image-preview
   src: zhangxue.jpg
   width: 800
