@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Light Course Profile Mockup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f7f8;
+      color: #232629;
+    }
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 24px;
+      color: #626970;
+      line-height: 1.7;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #dde1e5;
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 10px 22px rgba(24, 31, 38, .06);
+    }
+    .panel-title {
+      margin: 0 0 18px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1c252d;
+    }
+    .course-card {
+      border: 1px solid #e3e7ea;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 14px;
+      background: #fcfcfd;
+    }
+    .course-card h3,
+    .section h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .pill {
+      border: 1px solid #d5dde5;
+      border-radius: 999px;
+      padding: 3px 9px;
+      color: #41505d;
+      font-size: 12px;
+      background: #fff;
+    }
+    p {
+      margin: 0;
+      color: #535d66;
+      line-height: 1.72;
+      font-size: 14px;
+    }
+    .linkline {
+      margin-top: 12px;
+      color: #2368a2;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    .section {
+      border-top: 1px solid #e7eaee;
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+    .list {
+      padding-left: 18px;
+      margin: 10px 0 0;
+      color: #4b555f;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    .note {
+      border-left: 3px solid #6c8fb3;
+      background: #f4f7fa;
+      padding: 10px 12px;
+      margin-top: 10px;
+      color: #46525c;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    @media (max-width: 850px) {
+      .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>教学页：轻量课程档案</h1>
+    <p class="subtitle">建议路径：教学首页展示课程入口；单门课程页展示课程简介、资料目录、相关教学笔记。</p>
+
+    <div class="split">
+      <section class="panel">
+        <h2 class="panel-title">A. /courses/ 教学首页</h2>
+        <article class="course-card">
+          <h3>微观计量经济学</h3>
+          <div class="meta">
+            <span class="pill">研究生课程</span>
+            <span class="pill">实证方法</span>
+            <span class="pill">因果识别</span>
+          </div>
+          <p>课程聚焦微观数据下的因果识别、经验研究设计与论文写作中的方法辨析。</p>
+          <div class="linkline">查看课程资料与教学笔记 →</div>
+        </article>
+        <article class="course-card">
+          <h3>财政学 / 公共经济学专题</h3>
+          <div class="meta">
+            <span class="pill">本科/研究生</span>
+            <span class="pill">财政体制</span>
+            <span class="pill">政策分析</span>
+          </div>
+          <p>可作为后续新增课程示例；没有资料时也可以先只展示课程简介。</p>
+          <div class="linkline">查看课程资料与教学笔记 →</div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">B. 单门课程页</h2>
+        <h3>微观计量经济学</h3>
+        <div class="meta">
+          <span class="pill">授课对象：研究生</span>
+          <span class="pill">更新：2026 春</span>
+        </div>
+        <p>一句话说明课程目标，以及学生通过课程会获得什么能力。</p>
+        <div class="section">
+          <h3>课程资料</h3>
+          <ul class="list">
+            <li>课程大纲 / Syllabus</li>
+            <li>讲义：因果识别、DID、工具变量、机制分析</li>
+            <li>数据与代码：按主题整理，可链接到 PDF、网盘或 GitHub</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>教学笔记</h3>
+          <ul class="list">
+            <li>异质性、机制和渠道的辨析</li>
+            <li>后续所有标记 courses: ["微观计量经济学"] 的文章自动出现</li>
+          </ul>
+          <div class="note">这让“课程档案”负责稳定信息，“教学笔记”负责持续更新。</div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
