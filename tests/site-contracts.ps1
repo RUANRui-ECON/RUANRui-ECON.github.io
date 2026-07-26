@@ -129,6 +129,18 @@ function Test-Research {
   }
 }
 
+function Test-About {
+  $about = Read-Built 'about/index.html'
+  Assert-True ($about -match 'class="about-layout"') 'about page must use custom layout'
+  Assert-True ($about -match 'class="about-toc"') 'about page must expose section navigation'
+  $main = [regex]::Match($about, '<main.*?</main>', 'Singleline').Value
+  $h1Count = [regex]::Matches($main, '<h1\b').Count
+  Assert-True ($h1Count -eq 1) "about main must contain exactly one h1; got $h1Count"
+
+  $post = Read-Built 'posts/new-event-and-old-antidote/index.html'
+  Assert-True ($post -match 'class="page single academic-article') 'posts must use academic reading layout'
+}
+
 $exitCode = 0
 try {
   & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
@@ -149,6 +161,10 @@ try {
     Test-Research
     Write-Output 'PASS: research'
   }
+  elseif ($Section -eq 'about') {
+    Test-About
+    Write-Output 'PASS: about'
+  }
   elseif ($Section -eq 'all') {
     Test-Global
     Write-Output 'PASS: global'
@@ -156,6 +172,8 @@ try {
     Write-Output 'PASS: home'
     Test-Research
     Write-Output 'PASS: research'
+    Test-About
+    Write-Output 'PASS: about'
   }
 }
 catch {

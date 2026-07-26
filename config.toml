@@ -6,6 +6,11 @@ languageName = "简体中文"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 
+[cascade]
+  type = "about"
+  [cascade._target]
+    path = "{/about,/about/**}"
+
 [taxonomies]
   tag = "tags"
   category = "categories"
