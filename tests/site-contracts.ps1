@@ -85,6 +85,18 @@ function Test-Home {
   Assert-True ($homeMarkup -notmatch 'data-home="posts"') 'home must not render the full chronological post stream'
 }
 
+function Test-Research {
+  $research = Read-Built 'research_topics/index.html'
+  $longAbstractPrefix = Convert-CodePoints @(0x957F, 0x6458, 0x8981, 0x2D)
+
+  Assert-True ($research -match 'class="research-intro"') 'research page must contain overview'
+  Assert-True ($research -match 'class="research-featured"') 'research page must contain explicit featured papers'
+  Assert-True ($research -match 'class="research-topic-grid"') 'research page must retain topic browsing'
+  Assert-True ($research -notmatch ('>' + [regex]::Escape($longAbstractPrefix))) 'research display titles must remove the long-abstract prefix'
+  $cards = [regex]::Matches($research, '<article\s+class="paper-card"(?:\s|>)').Count
+  Assert-True ($cards -eq 4) "research page must render the four featured paper cards; got $cards"
+}
+
 $exitCode = 0
 try {
   & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
@@ -101,11 +113,17 @@ try {
     Test-Home
     Write-Output 'PASS: home'
   }
+  elseif ($Section -eq 'research') {
+    Test-Research
+    Write-Output 'PASS: research'
+  }
   elseif ($Section -eq 'all') {
     Test-Global
     Write-Output 'PASS: global'
     Test-Home
     Write-Output 'PASS: home'
+    Test-Research
+    Write-Output 'PASS: research'
   }
 }
 catch {

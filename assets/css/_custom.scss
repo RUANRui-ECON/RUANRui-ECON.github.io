@@ -294,6 +294,122 @@ button:focus-visible,
   line-height: 1.8;
 }
 
+.research-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.research-intro {
+  max-width: 760px;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2.25rem, 5vw, 4rem);
+}
+
+.research-intro h1,
+.research-featured h2,
+.research-topic-heading h2 {
+  margin: 0;
+  color: var(--rr-navy);
+}
+
+.research-intro h1 {
+  font-size: clamp(2.25rem, 5vw, 3.65rem);
+  letter-spacing: .04em;
+}
+
+.research-intro > p:last-child {
+  max-width: 44rem;
+  margin: 1.2rem 0 0;
+  color: var(--rr-muted);
+  font-family: var(--rr-serif);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.85;
+}
+
+.research-featured,
+.research-topic-section {
+  padding: clamp(2.6rem, 6vw, 4.5rem) 0;
+  border-top: 1px solid var(--rr-line);
+}
+
+.research-topic-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.research-topic-heading h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.research-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 2rem;
+  background: var(--rr-line);
+  border: 1px solid var(--rr-line);
+}
+
+.research-topic-card {
+  min-width: 0;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--rr-paper);
+}
+
+.research-topic-card h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.research-topic-card h3 a,
+.research-topic-card li a,
+.research-topic-more {
+  overflow-wrap: anywhere;
+}
+
+.research-topic-card h3 a {
+  color: var(--rr-navy);
+  text-decoration: none;
+}
+
+.research-topic-card h3 a:hover,
+.research-topic-card li a:hover,
+.research-topic-more:hover {
+  color: var(--rr-red);
+}
+
+.research-topic-card ul {
+  display: grid;
+  gap: .65rem;
+  margin: 1.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-topic-card li {
+  min-width: 0;
+  color: var(--rr-muted);
+  font-size: .94rem;
+  line-height: 1.6;
+}
+
+.research-topic-card li a,
+.research-topic-more {
+  color: var(--rr-ink);
+  text-decoration-color: var(--rr-line);
+  text-underline-offset: .18em;
+}
+
+.research-topic-more {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--rr-red);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
 @media (max-width: 900px) {
   .academic-hero {
     grid-template-columns: 1fr;
@@ -305,7 +421,8 @@ button:focus-visible,
   }
 
   .pathway-steps,
-  .paper-grid {
+  .paper-grid,
+  .research-topic-grid {
     grid-template-columns: 1fr;
   }
 }
