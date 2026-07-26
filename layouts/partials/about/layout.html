@@ -3,7 +3,7 @@
   <div class="about-layout">
     <aside class="about-toc" aria-label="简历章节">
       <p class="section-kicker">目录</p>
-      {{ .TableOfContents }}
+      {{- replace .TableOfContents `id="TableOfContents"` `id="about-table-of-contents"` | safeHTML -}}
     </aside>
     <article class="about-content content" id="content">
       {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}

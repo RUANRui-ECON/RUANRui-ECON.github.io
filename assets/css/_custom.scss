@@ -53,7 +53,7 @@ button:focus-visible,
 .page.home .single .content .home-campus-photo {
   display: block;
   width: 800px;
-  max-width: calc(100vw - 2rem);
+  max-width: 100%;
   height: auto;
   margin: 1.875rem auto;
 }
@@ -154,6 +154,7 @@ button:focus-visible,
   justify-self: end;
   width: 100%;
   max-width: 250px;
+  aspect-ratio: 4 / 5;
 }
 
 .academic-hero-portrait::after {
@@ -170,7 +171,7 @@ button:focus-visible,
 .academic-hero-portrait img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100% !important;
   object-fit: cover;
   filter: saturate(.78) contrast(1.04);
 }

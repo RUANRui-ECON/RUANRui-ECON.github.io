@@ -76,6 +76,7 @@ function Test-Global {
 
 function Test-Home {
   $homeMarkup = Read-Built 'index.html'
+  $style = Read-Built 'css/style.min.css'
   Assert-True ($homeMarkup -match 'class="academic-hero"') 'home must contain academic hero'
   Assert-True ($homeMarkup -match (Convert-CodePoints @(0x653F, 0x7B56, 0x4FE1, 0x53F7))) 'home must state the research pathway'
   Assert-True ($homeMarkup -match 'class="research-pathway"') 'home must contain research pathway component'
@@ -83,6 +84,15 @@ function Test-Home {
   $cards = [regex]::Matches($homeMarkup, '<article\s+class="paper-card"(?:\s|>)').Count
   Assert-True ($cards -eq 4) "home must show exactly four explicitly featured papers; got $cards"
   Assert-True ($homeMarkup -notmatch 'data-home="posts"') 'home must not render the full chronological post stream'
+
+  # A replaced image keeps its intrinsic height unless both the wrapper and image
+  # participate in the crop. This guards the first viewport against a tall portrait.
+  $portraitRule = [regex]::Match($style, '\.academic-hero-portrait\{[^}]*\}').Value
+  $portraitImageRule = [regex]::Match($style, '\.academic-hero-portrait img\{[^}]*\}').Value
+  $campusPhotoRule = [regex]::Match($style, '\.home-campus-photo\{[^}]*\}').Value
+  Assert-True ($portraitRule -match 'aspect-ratio:4 / 5') 'home portrait wrapper must enforce a 4:5 crop'
+  Assert-True ($portraitImageRule -match 'height:100%\s*!important' -and $portraitImageRule -match 'object-fit:cover') 'home portrait image must fill the constrained crop height'
+  Assert-True ($campusPhotoRule -match 'max-width:100%') 'home campus photo must size against its content container to prevent mobile overflow'
 }
 
 function Test-Research {
@@ -136,6 +146,8 @@ function Test-About {
   $main = [regex]::Match($about, '<main.*?</main>', 'Singleline').Value
   $h1Count = [regex]::Matches($main, '<h1\b').Count
   Assert-True ($h1Count -eq 1) "about main must contain exactly one h1; got $h1Count"
+  Assert-True ($main -match 'id="about-table-of-contents"') 'about custom toc must use a page-specific id'
+  Assert-True ($main -notmatch 'id="TableOfContents"') 'about custom toc must not trigger the theme single-page toc initializer'
 
   $post = Read-Built 'posts/new-event-and-old-antidote/index.html'
   Assert-True ($post -match 'class="page single academic-article') 'posts must use academic reading layout'
