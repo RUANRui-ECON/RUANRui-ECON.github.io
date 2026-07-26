@@ -1,0 +1,69 @@
+// Project-level responsive overrides for the LoveIt theme.
+
+:root {
+  --rr-navy: #17324d;
+  --rr-red: #9e3b33;
+  --rr-paper: #f4f7f9;
+  --rr-ink: #1c252c;
+  --rr-muted: #687681;
+  --rr-line: #d8e0e6;
+  --rr-serif: "Songti SC", "STSong", "Noto Serif CJK SC", SimSun, serif;
+  --rr-sans: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+[theme="dark"] {
+  --rr-navy: #a9c7e2;
+  --rr-red: #e08c82;
+  --rr-paper: #151b20;
+  --rr-ink: #eef3f6;
+  --rr-muted: #aab7c1;
+  --rr-line: #34414a;
+}
+
+body {
+  background: var(--rr-paper);
+  color: var(--rr-ink);
+  font-family: var(--rr-sans);
+}
+
+h1,
+h2,
+h3,
+.header-title {
+  font-family: var(--rr-serif);
+}
+
+a:focus-visible,
+button:focus-visible,
+.menu-item:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--rr-red) 70%, white);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.page.home .single .content .home-campus-photo {
+  display: block;
+  width: 800px;
+  max-width: calc(100vw - 2rem);
+  height: auto;
+  margin: 1.875rem auto;
+}
+
+@media (max-width: 680px) {
+  .page.single .content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

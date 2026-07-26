@@ -1,6 +1,10 @@
 {{- if ne .Site.Params.footer.enable false -}}
     <footer class="footer">
         <div class="footer-container">
+            <nav class="footer-secondary-nav" aria-label="站点索引">
+                <a href="{{ "/tags/" | relLangURL }}">标签</a>
+                <a href="{{ "/categories/" | relLangURL }}">分类</a>
+            </nav>
             {{- /* Custom Content */ -}}
             {{- with .Site.Params.footer.custom -}}
                 <div class="footer-line">

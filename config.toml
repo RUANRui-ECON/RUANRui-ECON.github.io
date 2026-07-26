@@ -3,6 +3,7 @@ theme = "LoveIt"
 title = "阮睿的个人主页"
 languageCode = "zh-CN"
 languageName = "简体中文"
+defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 
 [taxonomies]
@@ -12,6 +13,14 @@ hasCJKLanguage = true
   courses = "courses"
 
 [params]
+  description = "阮睿，中央财经大学长聘副教授、博士生导师，研究宏观政策沟通、企业预期、财政治理与政府企业行为。"
+
+  [params.header.title]
+    name = "阮睿"
+
+  [params.app]
+    title = "阮睿"
+
   [params.assets]
     disableFingerprinting = true
 
@@ -70,16 +79,6 @@ hasCJKLanguage = true
     identifier = "media"
     name = "媒体"
     url = "/categories/媒体/"
-  [[menu.main]]
-    weight = 5
-    identifier = "tags"
-    name = "标签"
-    url = "/tags/"
-  [[menu.main]]
-    weight = 6
-    identifier = "categories"
-    name = "分类"
-    url = "/categories/"
 
 
 # Hugo 解析文档的配置
