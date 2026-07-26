@@ -88,13 +88,45 @@ function Test-Home {
 function Test-Research {
   $research = Read-Built 'research_topics/index.html'
   $longAbstractPrefix = Convert-CodePoints @(0x957F, 0x6458, 0x8981, 0x2D)
+  $expectedFeaturedLinks = @(
+    '/posts/new-event-and-old-antidote/',
+    '/posts/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%94%BF%E7%AD%96%E6%B2%9F%E9%80%9A%E4%B8%8E%E9%A2%84%E6%9C%9F%E7%AE%A1%E7%90%86%E6%9D%A5%E8%87%AA%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E4%BC%9A%E7%9A%84%E8%AF%81%E6%8D%AE/',
+    '/posts/%E5%AE%89%E5%85%A8%E4%B8%8E%E6%95%88%E7%9B%8A%E5%8F%AF%E4%BB%A5%E5%85%BC%E5%BE%97/',
+    '/posts/%E4%B8%8A%E6%B8%B8%E5%9E%84%E6%96%AD%E4%B8%8E%E5%B8%82%E5%9C%BA%E5%8C%96%E6%94%B9%E9%9D%A9%E7%9A%84%E4%BE%9B%E7%BB%99%E6%82%96%E8%AE%BA/'
+  )
+  $expectedTopicLinks = @(
+    '/research_topics/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/',
+    '/research_topics/%E7%BB%84%E7%BB%87%E7%BB%8F%E6%B5%8E%E5%AD%A6/',
+    '/research_topics/%E4%BF%A1%E6%81%AF%E6%8A%AB%E9%9C%B2/',
+    '/research_topics/%E5%9B%BD%E6%9C%89%E4%BC%81%E4%B8%9A/',
+    '/research_topics/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%84%9F%E7%9F%A5/',
+    '/research_topics/%E6%94%BF%E5%BA%9C%E5%80%BA%E5%8A%A1/',
+    '/research_topics/%E6%94%BF%E7%AD%96%E6%B2%9F%E9%80%9A/',
+    '/research_topics/%E8%B4%A2%E6%94%BF%E4%BD%93%E5%88%B6/'
+  )
 
   Assert-True ($research -match 'class="research-intro"') 'research page must contain overview'
   Assert-True ($research -match 'class="research-featured"') 'research page must contain explicit featured papers'
   Assert-True ($research -match 'class="research-topic-grid"') 'research page must retain topic browsing'
   Assert-True ($research -notmatch ('>' + [regex]::Escape($longAbstractPrefix))) 'research display titles must remove the long-abstract prefix'
-  $cards = [regex]::Matches($research, '<article\s+class="paper-card"(?:\s|>)').Count
-  Assert-True ($cards -eq 4) "research page must render the four featured paper cards; got $cards"
+
+  $featuredMarkup = [regex]::Match($research, '<section class="research-featured".*?</section>', 'Singleline').Value
+  $featuredCards = [regex]::Matches($featuredMarkup, '<article\s+class="paper-card"(?:\s|>).*?</article>', 'Singleline')
+  Assert-True ($featuredCards.Count -eq 4) "research page must render exactly four featured paper cards; got $($featuredCards.Count)"
+  $featuredLinks = @($featuredCards | ForEach-Object {
+    [regex]::Match($_.Value, '<h3><a href="([^"]+)"').Groups[1].Value
+  })
+  Assert-True (($featuredLinks -join '|') -eq ($expectedFeaturedLinks -join '|')) 'research featured cards must use the approved paper URLs in featuredWeight order'
+
+  $topicGrid = [regex]::Match($research, '<div class="research-topic-grid">.*?</div>\s*</section>', 'Singleline').Value
+  $topicCards = [regex]::Matches($topicGrid, '<article class="research-topic-card".*?</article>', 'Singleline')
+  Assert-True ($topicCards.Count -eq 8) "research page must render exactly eight topic cards; got $($topicCards.Count)"
+  $topicLinks = @($topicCards | ForEach-Object {
+    [regex]::Match($_.Value, '<h3>\s*<a href="([^"]+)"', 'Singleline').Groups[1].Value
+  })
+  foreach ($expectedTopicLink in $expectedTopicLinks) {
+    Assert-True ($topicLinks -contains $expectedTopicLink) "research topic grid must link to $expectedTopicLink"
+  }
 }
 
 $exitCode = 0
