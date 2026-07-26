@@ -1,7 +1,8 @@
 param(
   [ValidateSet('global','home','research','about','all')]
   [string]$Section = 'all',
-  [string]$Hugo = 'hugo'
+  [string]$Hugo = 'hugo',
+  [switch]$MutationTest
 )
 
 $siteRoot = Split-Path $PSScriptRoot -Parent
@@ -26,13 +27,34 @@ function Assert-PrimaryNavigation([string]$Markup, [string]$Location) {
     @{ Nav = 'teaching'; Label = Convert-CodePoints @(0x6559, 0x5B66) },
     @{ Nav = 'media'; Label = Convert-CodePoints @(0x5A92, 0x4F53) }
   )
-  $primaryLinks = [regex]::Matches($Markup, '<a[^>]*data-nav="(?:about|research|teaching|media)"[^>]*>.*?</a>', 'Singleline')
+  # Header menu entries carry data-nav; the theme toggle and search controls do not.
+  $primaryLinks = [regex]::Matches($Markup, '<a[^>]*data-nav="[^"]+"[^>]*>.*?</a>', 'Singleline')
 
   Assert-True ($primaryLinks.Count -eq 4) "$Location navigation must contain exactly four primary links"
   foreach ($expected in $expectedLinks) {
     $pattern = '<a[^>]*data-nav="' + $expected.Nav + '"[^>]*>\s*' + [regex]::Escape($expected.Label) + '\s*</a>'
     Assert-True ($Markup -match $pattern) "$Location navigation must expose the $($expected.Nav) label"
   }
+}
+
+function Test-PrimaryNavigationMutation {
+  $fixture = @(
+    '<a data-nav="about">' + (Convert-CodePoints @(0x7B80, 0x5386)) + '</a>',
+    '<a data-nav="research">' + (Convert-CodePoints @(0x79D1, 0x5B66, 0x7814, 0x7A76)) + '</a>',
+    '<a data-nav="teaching">' + (Convert-CodePoints @(0x6559, 0x5B66)) + '</a>',
+    '<a data-nav="media">' + (Convert-CodePoints @(0x5A92, 0x4F53)) + '</a>',
+    '<a data-nav="unexpected">Extra</a>'
+  ) -join ''
+  $rejected = $false
+
+  try {
+    Assert-PrimaryNavigation $fixture 'mutation fixture'
+  }
+  catch {
+    $rejected = $true
+  }
+
+  Assert-True $rejected 'primary navigation contract must reject a fifth menu link'
 }
 
 function Test-Global {
@@ -56,8 +78,14 @@ $exitCode = 0
 try {
   & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
   if ($LASTEXITCODE -ne 0) { throw "Hugo build failed with exit code $LASTEXITCODE" }
-  if ($Section -in @('global','all')) { Test-Global }
-  Write-Output "PASS: $Section"
+  if ($MutationTest) {
+    Test-PrimaryNavigationMutation
+    Write-Output 'PASS: mutation'
+  }
+  elseif ($Section -in @('global','all')) {
+    Test-Global
+    Write-Output "PASS: $Section"
+  }
 }
 catch {
   Write-Error $_
