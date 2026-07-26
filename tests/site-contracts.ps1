@@ -77,6 +77,7 @@ function Test-MobileMenuAccessibility {
   Assert-True ($mobileHeader -match [regex]::Escape($expectedToggle)) 'mobile menu toggle must be a native button with exact accessible markup'
   Assert-True ($mobileHeader -notmatch '<div class="menu-toggle"') 'mobile menu toggle must not be a non-interactive div'
   Assert-True ($homePage -match '<script id="mobile-menu-state-sync">' -and $homePage -match 'MutationObserver' -and $homePage -match 'aria-expanded') 'mobile menu must synchronize aria-expanded with theme-controlled active state'
+  Assert-True ($homePage -match "addEventListener\('keydown'" -and $homePage -match "event\.key === 'Enter'" -and $homePage -match "event\.key === ' '" -and $homePage -match 'event\.preventDefault\(\)' -and $homePage -match 'toggle\.click\(\)') 'mobile menu must explicitly handle Enter and Space exactly through a prevented fallback click'
 }
 
 function Test-Global {

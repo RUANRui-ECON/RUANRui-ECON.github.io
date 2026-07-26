@@ -190,6 +190,12 @@
             toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
             toggle.setAttribute('aria-label', expanded ? '关闭导航菜单' : '打开导航菜单');
         };
+        toggle.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggle.click();
+            }
+        });
         syncState();
         new MutationObserver(syncState).observe(toggle, { attributes: true, attributeFilter: ['class'] });
     })();
