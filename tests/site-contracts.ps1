@@ -1,5 +1,5 @@
 param(
-  [ValidateSet('global','home','research','about','all')]
+  [ValidateSet('global','home','research','about','accessibility','all')]
   [string]$Section = 'all',
   [string]$Hugo = 'hugo',
   [switch]$MutationTest
@@ -23,7 +23,7 @@ function Convert-CodePoints([int[]]$CodePoints) {
 function Assert-PrimaryNavigation([string]$Markup, [string]$Location) {
   $expectedLinks = @(
     @{ Nav = 'about'; Label = Convert-CodePoints @(0x7B80, 0x5386) },
-    @{ Nav = 'research'; Label = Convert-CodePoints @(0x79D1, 0x5B66, 0x7814, 0x7A76) },
+    @{ Nav = 'research'; Label = Convert-CodePoints @(0x7814, 0x7A76) },
     @{ Nav = 'teaching'; Label = Convert-CodePoints @(0x6559, 0x5B66) },
     @{ Nav = 'media'; Label = Convert-CodePoints @(0x5A92, 0x4F53) }
   )
@@ -40,7 +40,7 @@ function Assert-PrimaryNavigation([string]$Markup, [string]$Location) {
 function Test-PrimaryNavigationMutation {
   $fixture = @(
     '<a data-nav="about">' + (Convert-CodePoints @(0x7B80, 0x5386)) + '</a>',
-    '<a data-nav="research">' + (Convert-CodePoints @(0x79D1, 0x5B66, 0x7814, 0x7A76)) + '</a>',
+    '<a data-nav="research">' + (Convert-CodePoints @(0x7814, 0x7A76)) + '</a>',
     '<a data-nav="teaching">' + (Convert-CodePoints @(0x6559, 0x5B66)) + '</a>',
     '<a data-nav="media">' + (Convert-CodePoints @(0x5A92, 0x4F53)) + '</a>',
     '<a data-nav="unexpected">Extra</a>'
@@ -55,6 +55,28 @@ function Test-PrimaryNavigationMutation {
   }
 
   Assert-True $rejected 'primary navigation contract must reject a fifth menu link'
+}
+
+function Test-PublicOutputHygiene {
+  $publicRoot = Join-Path $siteRoot 'public'
+  Assert-True (Test-Path -LiteralPath $publicRoot) 'tracked public output must exist'
+
+  $publicHtml = Get-ChildItem -LiteralPath $publicRoot -Recurse -Filter '*.html' -File
+  $staleMatches = @($publicHtml | Select-String -Pattern 'livereload\.js|localhost:1313|This is my cool site' -AllMatches)
+  Assert-True ($staleMatches.Count -eq 0) "tracked public HTML must not contain development or placeholder output; got $($staleMatches.Count) matches"
+  Assert-True (-not (Test-Path -LiteralPath (Join-Path $publicRoot 'lib'))) 'obsolete tracked public/lib must be absent'
+  Assert-True (-not (Test-Path -LiteralPath (Join-Path $publicRoot 'page\1\index.html'))) 'obsolete root paginator output must be absent'
+}
+
+function Test-MobileMenuAccessibility {
+  $homePage = Read-Built 'index.html'
+  $mobileHeader = [regex]::Match($homePage, '<header class="mobile".*?</header>', 'Singleline').Value
+  $openMenuLabel = Convert-CodePoints @(0x6253, 0x5F00, 0x5BFC, 0x822A, 0x83DC, 0x5355)
+  $expectedToggle = '<button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="' + $openMenuLabel + '" aria-controls="menu-mobile" aria-expanded="false">'
+
+  Assert-True ($mobileHeader -match [regex]::Escape($expectedToggle)) 'mobile menu toggle must be a native button with exact accessible markup'
+  Assert-True ($mobileHeader -notmatch '<div class="menu-toggle"') 'mobile menu toggle must not be a non-interactive div'
+  Assert-True ($homePage -match '<script id="mobile-menu-state-sync">' -and $homePage -match 'MutationObserver' -and $homePage -match 'aria-expanded') 'mobile menu must synchronize aria-expanded with theme-controlled active state'
 }
 
 function Test-Global {
@@ -72,11 +94,14 @@ function Test-Global {
   Assert-True ($homePage -notmatch 'This is my cool site|My cool site') 'theme placeholder metadata must be removed'
   Assert-True ($footerNav -match 'href="/tags/"') 'footer secondary navigation must link to tags'
   Assert-True ($footerNav -match 'href="/categories/"') 'footer secondary navigation must link to categories'
+  Test-MobileMenuAccessibility
+  Test-PublicOutputHygiene
 }
 
 function Test-Home {
   $homeMarkup = Read-Built 'index.html'
   $style = Read-Built 'css/style.min.css'
+  $indexTemplate = Get-Content -Raw -Encoding utf8 (Join-Path $siteRoot 'layouts\index.html')
   Assert-True ($homeMarkup -match 'class="academic-hero"') 'home must contain academic hero'
   Assert-True ($homeMarkup -match (Convert-CodePoints @(0x653F, 0x7B56, 0x4FE1, 0x53F7))) 'home must state the research pathway'
   Assert-True ($homeMarkup -match 'class="research-pathway"') 'home must contain research pathway component'
@@ -84,6 +109,23 @@ function Test-Home {
   $cards = [regex]::Matches($homeMarkup, '<article\s+class="paper-card"(?:\s|>)').Count
   Assert-True ($cards -eq 4) "home must show exactly four explicitly featured papers; got $cards"
   Assert-True ($homeMarkup -notmatch 'data-home="posts"') 'home must not render the full chronological post stream'
+
+  $heroActions = [regex]::Match($homeMarkup, '<div class="hero-actions".*?</div>', 'Singleline').Value
+  $cvLabel = Convert-CodePoints @(0x5B66, 0x672F, 0x7B80, 0x5386)
+  $researchLabel = Convert-CodePoints @(0x7814, 0x7A76, 0x6210, 0x679C)
+  $emailLabel = Convert-CodePoints @(0x90AE, 0x4EF6, 0x8054, 0x7CFB)
+  Assert-True ($heroActions -match ('<a href="/about/">' + $cvLabel + '</a>')) 'hero must link to CV with exact approved label'
+  Assert-True ($heroActions -match ('<a href="/research_topics/">' + $researchLabel + '</a>')) 'hero must link to research with exact approved label'
+  Assert-True ($heroActions -match ('<a href="mailto:ruanrui@cufe\.edu\.cn">' + $emailLabel + '</a>')) 'hero must link to email with exact approved label'
+
+  $explore = [regex]::Match($homeMarkup, '<section class="home-explore".*?</section>', 'Singleline').Value
+  $allResearchLabel = Convert-CodePoints @(0x67E5, 0x770B, 0x5168, 0x90E8, 0x7814, 0x7A76)
+  $teachingLabel = Convert-CodePoints @(0x6559, 0x5B66)
+  $mediaLabel = Convert-CodePoints @(0x5A92, 0x4F53)
+  Assert-True ([regex]::IsMatch($explore, ('href="/research_topics/"[^>]*>.*?' + $allResearchLabel), 'IgnoreCase, Singleline')) 'home exploration must link to all research'
+  Assert-True ([regex]::IsMatch($explore, ('href="/courses/"[^>]*>.*?' + $teachingLabel), 'IgnoreCase, Singleline')) 'home exploration must link to teaching'
+  Assert-True ([regex]::IsMatch($explore, ('href="/categories/%E5%AA%92%E4%BD%93/"[^>]*>.*?' + $mediaLabel), 'IgnoreCase, Singleline')) 'home exploration must link to media'
+  Assert-True ([regex]::IsMatch($indexTemplate, '\{\{- with \$featured -\}\}.*?</section>\s*\{\{- end -\}\}\s*\{\{- partial "home/explore\.html" \. -\}\}', 'Singleline')) 'home exploration partial must remain outside the featured conditional'
 
   # A replaced image keeps its intrinsic height unless both the wrapper and image
   # participate in the crop. This guards the first viewport against a tall portrait.
@@ -176,6 +218,10 @@ try {
   elseif ($Section -eq 'about') {
     Test-About
     Write-Output 'PASS: about'
+  }
+  elseif ($Section -eq 'accessibility') {
+    Test-MobileMenuAccessibility
+    Write-Output 'PASS: accessibility'
   }
   elseif ($Section -eq 'all') {
     Test-Global

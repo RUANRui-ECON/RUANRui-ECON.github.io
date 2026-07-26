@@ -73,7 +73,7 @@ hasCJKLanguage = true
   [[menu.main]]
     weight = 2
     identifier = "research_topics"
-    name = "科学研究"
+    name = "研究"
     url = "/research_topics/"
   [[menu.main]]
     weight = 3
