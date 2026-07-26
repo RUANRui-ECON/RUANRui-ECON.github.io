@@ -93,13 +93,19 @@ try {
     Test-PrimaryNavigationMutation
     Write-Output 'PASS: mutation'
   }
+  elseif ($Section -eq 'global') {
+    Test-Global
+    Write-Output 'PASS: global'
+  }
   elseif ($Section -eq 'home') {
     Test-Home
     Write-Output 'PASS: home'
   }
-  elseif ($Section -in @('global','all')) {
+  elseif ($Section -eq 'all') {
     Test-Global
-    Write-Output "PASS: $Section"
+    Write-Output 'PASS: global'
+    Test-Home
+    Write-Output 'PASS: home'
   }
 }
 catch {
