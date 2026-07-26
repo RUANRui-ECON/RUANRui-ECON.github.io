@@ -70,6 +70,7 @@ function Test-PublicOutputHygiene {
 
 function Test-MobileMenuAccessibility {
   $homePage = Read-Built 'index.html'
+  $style = Read-Built 'css/style.min.css'
   $mobileHeader = [regex]::Match($homePage, '<header class="mobile".*?</header>', 'Singleline').Value
   $openMenuLabel = Convert-CodePoints @(0x6253, 0x5F00, 0x5BFC, 0x822A, 0x83DC, 0x5355)
   $expectedToggle = '<button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="' + $openMenuLabel + '" aria-controls="menu-mobile" aria-expanded="false">'
@@ -78,6 +79,8 @@ function Test-MobileMenuAccessibility {
   Assert-True ($mobileHeader -notmatch '<div class="menu-toggle"') 'mobile menu toggle must not be a non-interactive div'
   Assert-True ($homePage -match '<script id="mobile-menu-state-sync">' -and $homePage -match 'MutationObserver' -and $homePage -match 'aria-expanded') 'mobile menu must synchronize aria-expanded with theme-controlled active state'
   Assert-True ($homePage -match "addEventListener\('keydown'" -and $homePage -match "event\.key === 'Enter'" -and $homePage -match "event\.key === ' '" -and $homePage -match 'event\.preventDefault\(\)' -and $homePage -match 'toggle\.click\(\)') 'mobile menu must explicitly handle Enter and Space exactly through a prevented fallback click'
+  $toggleRule = [regex]::Match($style, '#menu-toggle-mobile\{[^}]*\}').Value
+  Assert-True ($toggleRule -match 'min-width:44px' -and $toggleRule -match 'min-height:44px') 'mobile menu toggle must compile to a minimum 44 by 44 pixel interactive target'
 }
 
 function Test-Global {
