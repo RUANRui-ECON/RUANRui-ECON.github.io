@@ -7,6 +7,9 @@ param(
 
 $siteRoot = Split-Path $PSScriptRoot -Parent
 $outputRoot = Join-Path ([IO.Path]::GetTempPath()) ("ruanrui-contracts-" + [guid]::NewGuid())
+$cacheRoot = Join-Path ([IO.Path]::GetTempPath()) ("ruanrui-contract-cache-" + [guid]::NewGuid())
+$resourceRoot = Join-Path $cacheRoot 'resources'
+$previousResourceDir = [Environment]::GetEnvironmentVariable('HUGO_RESOURCEDIR', 'Process')
 
 function Assert-True([bool]$Condition, [string]$Message) {
   if (-not $Condition) { throw "CONTRACT FAILED: $Message" }
@@ -201,7 +204,8 @@ function Test-About {
 
 $exitCode = 0
 try {
-  & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
+  $env:HUGO_RESOURCEDIR = $resourceRoot
+  & $Hugo --source $siteRoot --destination $outputRoot --cacheDir $cacheRoot --noBuildLock --quiet
   if ($LASTEXITCODE -ne 0) { throw "Hugo build failed with exit code $LASTEXITCODE" }
   if ($MutationTest) {
     Test-PrimaryNavigationMutation
@@ -243,11 +247,19 @@ catch {
   $exitCode = 1
 }
 finally {
+  if ($null -eq $previousResourceDir) {
+    Remove-Item Env:HUGO_RESOURCEDIR -ErrorAction SilentlyContinue
+  }
+  else {
+    $env:HUGO_RESOURCEDIR = $previousResourceDir
+  }
   $separator = [IO.Path]::DirectorySeparatorChar
   $tempRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd($separator)
-  $resolved = [IO.Path]::GetFullPath($outputRoot)
-  if ($resolved.StartsWith($tempRoot + $separator, [StringComparison]::OrdinalIgnoreCase) -and (Test-Path $resolved)) {
-    Remove-Item -LiteralPath $resolved -Recurse -Force
+  foreach ($generatedRoot in @($outputRoot, $cacheRoot)) {
+    $resolved = [IO.Path]::GetFullPath($generatedRoot)
+    if ($resolved.StartsWith($tempRoot + $separator, [StringComparison]::OrdinalIgnoreCase) -and (Test-Path $resolved)) {
+      Remove-Item -LiteralPath $resolved -Recurse -Force
+    }
   }
 }
 
