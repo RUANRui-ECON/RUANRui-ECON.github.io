@@ -15,25 +15,53 @@ function Read-Built([string]$RelativePath) {
   Get-Content -Raw -Encoding utf8 (Join-Path $outputRoot $RelativePath)
 }
 
-function Test-Global {
-  $homePage = Read-Built 'index.html'
-  $header = [regex]::Match($homePage, '<header class="desktop".*?</header>', 'Singleline').Value
-  Assert-True ($homePage -match '<html lang="zh-cn">') 'default site language must be zh-cn'
-  Assert-True ($header -match 'data-nav="about"') 'desktop header must include the about link'
-  Assert-True ($header -match 'data-nav="research"') 'desktop header must include the research link'
-  Assert-True ($header -match 'data-nav="teaching"') 'desktop header must include the teaching link'
-  Assert-True ($header -match 'data-nav="media"') 'desktop header must include the media link'
-  Assert-True ($header -notmatch 'data-nav="tags"') 'desktop header must not include the tags link'
-  Assert-True ($header -notmatch 'data-nav="categories"') 'desktop header must not include the categories link'
-  Assert-True ($homePage -notmatch 'This is my cool site|My cool site') 'theme placeholder metadata must be removed'
-  Assert-True ($homePage -match 'footer-secondary-nav') 'footer must expose secondary navigation'
+function Convert-CodePoints([int[]]$CodePoints) {
+  -join ($CodePoints | ForEach-Object { [char]$_ })
 }
 
+function Assert-PrimaryNavigation([string]$Markup, [string]$Location) {
+  $expectedLinks = @(
+    @{ Nav = 'about'; Label = Convert-CodePoints @(0x7B80, 0x5386) },
+    @{ Nav = 'research'; Label = Convert-CodePoints @(0x79D1, 0x5B66, 0x7814, 0x7A76) },
+    @{ Nav = 'teaching'; Label = Convert-CodePoints @(0x6559, 0x5B66) },
+    @{ Nav = 'media'; Label = Convert-CodePoints @(0x5A92, 0x4F53) }
+  )
+  $primaryLinks = [regex]::Matches($Markup, '<a[^>]*data-nav="(?:about|research|teaching|media)"[^>]*>.*?</a>', 'Singleline')
+
+  Assert-True ($primaryLinks.Count -eq 4) "$Location navigation must contain exactly four primary links"
+  foreach ($expected in $expectedLinks) {
+    $pattern = '<a[^>]*data-nav="' + $expected.Nav + '"[^>]*>\s*' + [regex]::Escape($expected.Label) + '\s*</a>'
+    Assert-True ($Markup -match $pattern) "$Location navigation must expose the $($expected.Nav) label"
+  }
+}
+
+function Test-Global {
+  $homePage = Read-Built 'index.html'
+  $desktopHeader = [regex]::Match($homePage, '<header class="desktop".*?</header>', 'Singleline').Value
+  $mobileHeader = [regex]::Match($homePage, '<header class="mobile".*?</header>', 'Singleline').Value
+  $footer = [regex]::Match($homePage, '<footer class="footer".*?</footer>', 'Singleline').Value
+  $footerNav = [regex]::Match($footer, '<nav class="footer-secondary-nav".*?</nav>', 'Singleline').Value
+
+  Assert-True ($homePage -match '<html lang="zh-cn">') 'default site language must be zh-cn'
+  Assert-PrimaryNavigation $desktopHeader 'desktop'
+  Assert-PrimaryNavigation $mobileHeader 'mobile'
+  Assert-True ($desktopHeader -notmatch 'data-nav="tags"|data-nav="categories"') 'desktop header must not include taxonomy links'
+  Assert-True ($mobileHeader -notmatch 'data-nav="tags"|data-nav="categories"') 'mobile header must not include taxonomy links'
+  Assert-True ($homePage -notmatch 'This is my cool site|My cool site') 'theme placeholder metadata must be removed'
+  Assert-True ($footerNav -match 'href="/tags/"') 'footer secondary navigation must link to tags'
+  Assert-True ($footerNav -match 'href="/categories/"') 'footer secondary navigation must link to categories'
+}
+
+$exitCode = 0
 try {
   & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
   if ($LASTEXITCODE -ne 0) { throw "Hugo build failed with exit code $LASTEXITCODE" }
   if ($Section -in @('global','all')) { Test-Global }
   Write-Output "PASS: $Section"
+}
+catch {
+  Write-Error $_
+  $exitCode = 1
 }
 finally {
   $separator = [IO.Path]::DirectorySeparatorChar
@@ -43,3 +71,5 @@ finally {
     Remove-Item -LiteralPath $resolved -Recurse -Force
   }
 }
+
+exit $exitCode
