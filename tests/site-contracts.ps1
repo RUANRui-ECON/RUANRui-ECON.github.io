@@ -74,6 +74,17 @@ function Test-Global {
   Assert-True ($footerNav -match 'href="/categories/"') 'footer secondary navigation must link to categories'
 }
 
+function Test-Home {
+  $homeMarkup = Read-Built 'index.html'
+  Assert-True ($homeMarkup -match 'class="academic-hero"') 'home must contain academic hero'
+  Assert-True ($homeMarkup -match (Convert-CodePoints @(0x653F, 0x7B56, 0x4FE1, 0x53F7))) 'home must state the research pathway'
+  Assert-True ($homeMarkup -match 'class="research-pathway"') 'home must contain research pathway component'
+  Assert-True ($homeMarkup -match 'class="featured-research"') 'home must contain featured research section'
+  $cards = [regex]::Matches($homeMarkup, '<article\s+class="paper-card"(?:\s|>)').Count
+  Assert-True ($cards -eq 4) "home must show exactly four explicitly featured papers; got $cards"
+  Assert-True ($homeMarkup -notmatch 'data-home="posts"') 'home must not render the full chronological post stream'
+}
+
 $exitCode = 0
 try {
   & $Hugo --source $siteRoot --destination $outputRoot --noBuildLock --quiet
@@ -81,6 +92,10 @@ try {
   if ($MutationTest) {
     Test-PrimaryNavigationMutation
     Write-Output 'PASS: mutation'
+  }
+  elseif ($Section -eq 'home') {
+    Test-Home
+    Write-Output 'PASS: home'
   }
   elseif ($Section -in @('global','all')) {
     Test-Global

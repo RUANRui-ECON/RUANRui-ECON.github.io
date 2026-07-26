@@ -3,6 +3,8 @@ title: "宏观经济政策沟通与预期管理：来自新闻发布会的证据
 subtitle: 《世界经济》, 2026年第3期
 date: 2026-03-10
 draft: false
+featured: true
+featuredWeight: 2
 author: 阮睿 彭卓然 孙宇辰
 summary: 在不确定性的时代，沉默的代价远高于真话的风险。市场记得谁选择了坦诚，也会用更低的融资成本和更稳定的估值来回报透明度。
 categories: ["科学研究"]

@@ -1,0 +1,13 @@
+{{- $page := .Page -}}
+{{- $displayTitle := strings.TrimPrefix "长摘要-" $page.Title -}}
+<article class="paper-card">
+  <p class="paper-card-kicker">
+    {{- with $page.Params.subtitle }}{{ . }}{{ else }}{{ $page.Date.Format "2006" }}{{ end -}}
+  </p>
+  <h3><a href="{{ $page.RelPermalink }}">{{ $displayTitle }}</a></h3>
+  {{- with $page.Params.author }}<p class="paper-card-authors">{{ . }}</p>{{ end -}}
+  {{- with $page.Summary }}<p class="paper-card-summary">{{ . | plainify | truncate 150 }}</p>{{ end -}}
+  {{- with $page.Params.research_topics }}
+    <p class="paper-card-topics">{{ delimit . " · " }}</p>
+  {{- end -}}
+</article>

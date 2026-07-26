@@ -1,0 +1,21 @@
+{{- $profile := .Site.Params.home.profile -}}
+{{- $author := .Site.Params.author -}}
+<section class="academic-hero" aria-labelledby="academic-hero-title">
+  <div class="academic-hero-copy">
+    <p class="section-kicker">个人学术主页</p>
+    <h1 id="academic-hero-title">{{ $profile.title }}</h1>
+    <p class="academic-hero-role">{{ $profile.subtitle }}</p>
+    <p class="academic-hero-institution">{{ $profile.subtitle2 }}</p>
+    <p class="academic-hero-research">聚焦宏观政策沟通、企业预期与财政治理，研究政策信号如何影响微观主体与地方政府的行为。</p>
+    <div class="hero-actions" aria-label="快速入口">
+      <a href="{{ "/about/" | relLangURL }}">查看简历</a>
+      <a href="{{ "/research_topics/" | relLangURL }}">浏览研究</a>
+      <a href="mailto:{{ $author.email }}">联系我</a>
+    </div>
+  </div>
+  {{- with $profile.avatarURL }}
+    <div class="academic-hero-portrait">
+      {{- dict "Src" . "Class" "academic-hero-portrait-image" "Alt" $profile.title | partial "plugin/img.html" -}}
+    </div>
+  {{- end }}
+</section>

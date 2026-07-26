@@ -1,4 +1,4 @@
-<div style="text-align: left; max-width: 600px; margin: 0 auto;">
+<div class="home-contact">
 
 **邮箱地址：** [ruanrui@cufe.edu.cn](mailto:ruanrui@cufe.edu.cn)
 
@@ -7,11 +7,4 @@
 **Office Hour:** 周二下午14:00 - 17:00
 </div>
 
-<style>
-.content img {
-    width: auto !important;
-    height: auto !important;
-}
-</style>
-
-<img src="IMG_20251019_151933.jpg" alt="校园照片" style="max-width: 800px; display: block; margin: 30px auto;">
+<img class="home-campus-photo" src="IMG_20251019_151933.jpg" alt="中央财经大学校园" loading="lazy">
