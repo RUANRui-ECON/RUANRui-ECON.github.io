@@ -3,8 +3,6 @@ title: "上游垄断与市场化改革的“供给悖论”——基于全面取
 subtitle: 《管理世界》2024年第10期
 date: 2024-10-08
 draft: false
-featured: true
-featuredWeight: 4
 author: 钟洲 王麒植 阮睿 陈思明 王红梅
 summary: 
 categories: ["科学研究"]

@@ -3,6 +3,8 @@ title: "长摘要-宏观经济感知、货币政策与微观企业投融资行�
 subtitle: 《经济研究》2021年第10期
 date: 2023-07-15T14:20:13+08:00
 draft: false
+featured: true
+featuredWeight: 4
 author: 张成思 孙宇辰 阮睿
 summary: 仅企业宏观经济预期指数显著影响企业投融资行为，而企业宏观经济回顾指数则没有相应效果。这表明，企业宏观经济感知中主要是预期成分发挥作用。
 categories: ["科学研究"]
