@@ -21,6 +21,9 @@ hasCJKLanguage = true
   images = ["/og.png"]
   description = "阮睿，中央财经大学长聘副教授、博士生导师，研究宏观政策沟通、企业预期、财政治理与政府企业行为。"
 
+  [params.cdn]
+    data = ""
+
   [params.header.title]
     name = "阮睿"
 

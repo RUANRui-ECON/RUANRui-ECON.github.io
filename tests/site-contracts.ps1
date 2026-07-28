@@ -67,8 +67,43 @@ function Test-PublicOutputHygiene {
   $publicHtml = Get-ChildItem -LiteralPath $publicRoot -Recurse -Filter '*.html' -File
   $staleMatches = @($publicHtml | Select-String -Pattern 'livereload\.js|localhost:1313|This is my cool site' -AllMatches)
   Assert-True ($staleMatches.Count -eq 0) "tracked public HTML must not contain development or placeholder output; got $($staleMatches.Count) matches"
-  Assert-True (-not (Test-Path -LiteralPath (Join-Path $publicRoot 'lib'))) 'obsolete tracked public/lib must be absent'
   Assert-True (-not (Test-Path -LiteralPath (Join-Path $publicRoot 'page\1\index.html'))) 'obsolete root paginator output must be absent'
+}
+
+function Test-SelfHostedThemeAssets {
+  $builtHtml = Get-ChildItem -LiteralPath $outputRoot -Recurse -Filter '*.html' -File
+  $remoteMatches = @($builtHtml | Select-String -Pattern 'cdn\.jsdelivr\.net' -AllMatches)
+  $builtMarkup = ($builtHtml | ForEach-Object {
+    Get-Content -LiteralPath $_.FullName -Raw -Encoding utf8
+  }) -join "`n"
+  $requiredReferences = @(
+    '/lib/fontawesome-free/css/all\.min\.css',
+    '/lib/lazysizes/lazysizes\.min\.js',
+    '/lib/katex/katex\.min\.css'
+  )
+  $missingReferences = @($requiredReferences | Where-Object { $builtMarkup -notmatch $_ })
+
+  $publicRoot = Join-Path $siteRoot 'public'
+  $requiredTrackedAssets = @(
+    'lib\animate\animate.min.css',
+    'lib\clipboard\clipboard.min.js',
+    'lib\fontawesome-free\css\all.min.css',
+    'lib\fontawesome-free\webfonts\fa-solid-900.woff2',
+    'lib\katex\fonts\KaTeX_Main-Regular.woff2',
+    'lib\katex\katex.min.css',
+    'lib\katex\katex.min.js',
+    'lib\lazysizes\lazysizes.min.js',
+    'lib\sharer\sharer.min.js'
+  )
+  $missingTrackedAssets = @($requiredTrackedAssets | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $publicRoot $_) -PathType Leaf)
+  })
+
+  Assert-True (
+    $remoteMatches.Count -eq 0 -and
+    $missingReferences.Count -eq 0 -and
+    $missingTrackedAssets.Count -eq 0
+  ) "theme assets must be self-hosted; jsDelivr matches=$($remoteMatches.Count), missing generated references=$($missingReferences.Count), missing tracked assets=$($missingTrackedAssets.Count)"
 }
 
 function Test-MobileMenuAccessibility {
@@ -103,6 +138,7 @@ function Test-Global {
   Assert-True ($footerNav -match 'href="/categories/"') 'footer secondary navigation must link to categories'
   Test-MobileMenuAccessibility
   Test-PublicOutputHygiene
+  Test-SelfHostedThemeAssets
 }
 
 function Test-Home {
@@ -219,6 +255,9 @@ function Test-About {
   Assert-True ($h1Count -eq 1) "about main must contain exactly one h1; got $h1Count"
   Assert-True ($main -match 'id="about-table-of-contents"') 'about custom toc must use a page-specific id'
   Assert-True ($main -notmatch 'id="TableOfContents"') 'about custom toc must not trigger the theme single-page toc initializer'
+  $updatedLabel = Convert-CodePoints @(0x66F4, 0x65B0, 0x65F6, 0x95F4)
+  Assert-True ($main -match ('<h3 id="' + $updatedLabel + '">' + $updatedLabel + '</h3>')) 'about update time must be an h3'
+  Assert-True ($main -notmatch ('<h4 id="' + $updatedLabel + '">' + $updatedLabel + '</h4>')) 'about update time must not be an h4'
 
   $post = Read-Built 'posts/new-event-and-old-antidote/index.html'
   Assert-True ($post -match 'class="page single academic-article') 'posts must use academic reading layout'
