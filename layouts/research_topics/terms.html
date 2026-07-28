@@ -11,16 +11,14 @@
 
     <div class="page archive research-page">
         <header class="research-intro">
-            <p class="section-kicker">研究方向</p>
-            <h1>{{ .Params.Title | default "科学研究" }}</h1>
+            <h1>研究方向</h1>
             <p>聚焦宏观政策沟通、企业预期与财政治理，研究政策信号如何影响微观主体与地方政府的行为。</p>
         </header>
 
         {{- with $featured -}}
             <section class="research-featured" aria-labelledby="research-featured-title">
                 <div class="featured-research-heading">
-                    <p class="section-kicker">代表性研究</p>
-                    <h2 id="research-featured-title">从学术论文进入研究现场</h2>
+                    <h2 id="research-featured-title">代表性研究</h2>
                 </div>
                 <div class="paper-grid">
                     {{- range . -}}
@@ -32,8 +30,7 @@
 
         <section class="research-topic-section" aria-labelledby="research-topic-title">
             <div class="research-topic-heading">
-                <p class="section-kicker">按主题浏览</p>
-                <h2 id="research-topic-title">研究议题</h2>
+                <h2 id="research-topic-title">按主题浏览</h2>
             </div>
             <div class="research-topic-grid">
                 {{- range $terms -}}
