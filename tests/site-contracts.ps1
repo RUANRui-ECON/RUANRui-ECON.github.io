@@ -113,6 +113,15 @@ function Test-Home {
   Assert-True ($homeMarkup -match (Convert-CodePoints @(0x653F, 0x7B56, 0x4FE1, 0x53F7))) 'home must state the research pathway'
   Assert-True ($homeMarkup -match 'class="research-pathway"') 'home must contain research pathway component'
   Assert-True ($homeMarkup -match 'class="featured-research"') 'home must contain featured research section'
+  $featuredMarkup = [regex]::Match($homeMarkup, '<section class="featured-research".*?</section>', 'Singleline').Value
+  $disclosureSummary = Convert-CodePoints @(0x5728, 0x4E0D, 0x786E, 0x5B9A, 0x6027, 0x7684, 0x65F6, 0x4EE3, 0xFF0C, 0x6C89, 0x9ED8, 0x7684, 0x4EE3, 0x4EF7, 0x8FDC, 0x9AD8, 0x4E8E, 0x771F, 0x8BDD, 0x7684, 0x98CE, 0x9669, 0x3002, 0x5E02, 0x573A, 0x8BB0, 0x5F97, 0x8C01, 0x9009, 0x62E9, 0x4E86, 0x5766, 0x8BDA, 0xFF0C, 0x4E5F, 0x4F1A, 0x7528, 0x66F4, 0x4F4E, 0x7684, 0x878D, 0x8D44, 0x6210, 0x672C, 0x548C, 0x66F4, 0x7A33, 0x5B9A, 0x7684, 0x4F30, 0x503C, 0x6765, 0x56DE, 0x62A5, 0x900F, 0x660E, 0x5EA6, 0x3002)
+  $communicationSummary = Convert-CodePoints @(0x653F, 0x7B56, 0x7684, 0x6548, 0x679C, 0xFF0C, 0x4E0D, 0x53EA, 0x53D6, 0x51B3, 0x4E8E, 0x505A, 0x4E86, 0x4EC0, 0x4E48, 0xFF0C, 0x4E5F, 0x53D6, 0x51B3, 0x4E8E, 0x5E02, 0x573A, 0x542C, 0x89C1, 0x4E86, 0x4EC0, 0x4E48, 0x3001, 0x5982, 0x4F55, 0x7406, 0x89E3, 0x3002, 0x53CA, 0x65F6, 0x3001, 0x6E05, 0x6670, 0x4E14, 0x53EF, 0x4FE1, 0x7684, 0x6C9F, 0x901A, 0xFF0C, 0x80FD, 0x591F, 0x6821, 0x51C6, 0x9884, 0x671F, 0x5E76, 0x63D0, 0x632F, 0x4FE1, 0x5FC3, 0x3002)
+  $featuredResearchTitle = Convert-CodePoints @(0x4EE3, 0x8868, 0x6027, 0x7814, 0x7A76)
+  $featuredResearchSubtitle = Convert-CodePoints @(0x4ECE, 0x5B66, 0x672F, 0x8BBA, 0x6587, 0x8FDB, 0x5165, 0x7814, 0x7A76, 0x73B0, 0x573A)
+  Assert-True ($featuredMarkup -match ('<h2 id="featured-research-title">' + [regex]::Escape($featuredResearchTitle) + '</h2>')) 'home featured section must use the concise approved h2'
+  Assert-True ($featuredMarkup -notmatch [regex]::Escape($featuredResearchSubtitle)) 'home must remove the redundant featured-research subtitle'
+  Assert-True ($featuredMarkup -match [regex]::Escape($disclosureSummary)) 'home must show the disclosure summary on the English paper'
+  Assert-True ($featuredMarkup -match [regex]::Escape($communicationSummary)) 'home must show the approved policy-communication summary'
   $cards = [regex]::Matches($homeMarkup, '<article\s+class="paper-card"(?:\s|>)').Count
   Assert-True ($cards -eq 4) "home must show exactly four explicitly featured papers; got $cards"
   Assert-True ($homeMarkup -notmatch 'data-home="posts"') 'home must not render the full chronological post stream'
@@ -151,7 +160,7 @@ function Test-Research {
     '/posts/new-event-and-old-antidote/',
     '/posts/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%94%BF%E7%AD%96%E6%B2%9F%E9%80%9A%E4%B8%8E%E9%A2%84%E6%9C%9F%E7%AE%A1%E7%90%86%E6%9D%A5%E8%87%AA%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E4%BC%9A%E7%9A%84%E8%AF%81%E6%8D%AE/',
     '/posts/%E5%AE%89%E5%85%A8%E4%B8%8E%E6%95%88%E7%9B%8A%E5%8F%AF%E4%BB%A5%E5%85%BC%E5%BE%97/',
-    '/posts/%E4%B8%8A%E6%B8%B8%E5%9E%84%E6%96%AD%E4%B8%8E%E5%B8%82%E5%9C%BA%E5%8C%96%E6%94%B9%E9%9D%A9%E7%9A%84%E4%BE%9B%E7%BB%99%E6%82%96%E8%AE%BA/'
+    '/posts/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E6%84%9F%E7%9F%A5%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E4%B8%8E%E5%BE%AE%E8%A7%82%E4%BC%81%E4%B8%9A%E6%8A%95%E8%9E%8D%E8%B5%84%E8%A1%8C%E4%B8%BA/'
   )
   $expectedTopicLinks = @(
     '/research_topics/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/',
@@ -168,6 +177,19 @@ function Test-Research {
   Assert-True ($research -match 'class="research-featured"') 'research page must contain explicit featured papers'
   Assert-True ($research -match 'class="research-topic-grid"') 'research page must retain topic browsing'
   Assert-True ($research -notmatch ('>' + [regex]::Escape($longAbstractPrefix))) 'research display titles must remove the long-abstract prefix'
+  $researchMain = [regex]::Match($research, '<main.*?</main>', 'Singleline').Value
+  $researchDirection = Convert-CodePoints @(0x7814, 0x7A76, 0x65B9, 0x5411)
+  $featuredResearchTitle = Convert-CodePoints @(0x4EE3, 0x8868, 0x6027, 0x7814, 0x7A76)
+  $browseByTopic = Convert-CodePoints @(0x6309, 0x4E3B, 0x9898, 0x6D4F, 0x89C8)
+  $redundantResearchLabels = (@(
+    Convert-CodePoints @(0x79D1, 0x5B66, 0x7814, 0x7A76)
+    Convert-CodePoints @(0x4ECE, 0x5B66, 0x672F, 0x8BBA, 0x6587, 0x8FDB, 0x5165, 0x7814, 0x7A76, 0x73B0, 0x573A)
+    Convert-CodePoints @(0x7814, 0x7A76, 0x8BAE, 0x9898)
+  ) -join '|')
+  Assert-True ($researchMain -match ('<h1>' + $researchDirection + '</h1>')) 'research page must promote research direction to h1'
+  Assert-True ($researchMain -match ('<h2 id="research-featured-title">' + $featuredResearchTitle + '</h2>')) 'research page must use representative research as the featured h2'
+  Assert-True ($researchMain -match ('<h2 id="research-topic-title">' + $browseByTopic + '</h2>')) 'research page must use browse by topic as the taxonomy h2'
+  Assert-True ($researchMain -notmatch $redundantResearchLabels) 'research main must remove the three redundant labels'
 
   $featuredMarkup = [regex]::Match($research, '<section class="research-featured".*?</section>', 'Singleline').Value
   $featuredCards = [regex]::Matches($featuredMarkup, '<article\s+class="paper-card"(?:\s|>).*?</article>', 'Singleline')
