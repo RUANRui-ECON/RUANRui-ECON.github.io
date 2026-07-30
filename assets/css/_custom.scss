@@ -1,0 +1,19 @@
+// Project-level responsive overrides for the LoveIt theme.
+
+.page.home .single .content .home-campus-photo {
+  display: block;
+  width: 800px;
+  max-width: calc(100vw - 2rem);
+  height: auto;
+  margin: 1.875rem auto;
+}
+
+@media (max-width: 680px) {
+  .page.single .content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

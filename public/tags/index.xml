@@ -4,7 +4,47 @@
         <link>http://localhost:1313/tags/</link>
         <description>Tags - Tag - 阮睿的个人主页</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
-            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Mon, 05 Jan 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Sun, 05 Apr 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>评论</title>
+    <link>http://localhost:1313/tags/%E8%AF%84%E8%AE%BA/</link>
+    <pubDate>Sun, 05 Apr 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/tags/%E8%AF%84%E8%AE%BA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>心得</title>
+    <link>http://localhost:1313/tags/%E5%BF%83%E5%BE%97/</link>
+    <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/tags/%E5%BF%83%E5%BE%97/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>政策沟通</title>
+    <link>http://localhost:1313/tags/%E6%94%BF%E7%AD%96%E6%B2%9F%E9%80%9A/</link>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/tags/%E6%94%BF%E7%AD%96%E6%B2%9F%E9%80%9A/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>新闻发布会</title>
+    <link>http://localhost:1313/tags/%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E4%BC%9A/</link>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/tags/%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E4%BC%9A/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>预期管理</title>
+    <link>http://localhost:1313/tags/%E9%A2%84%E6%9C%9F%E7%AE%A1%E7%90%86/</link>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>http://localhost:1313/tags/%E9%A2%84%E6%9C%9F%E7%AE%A1%E7%90%86/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>不确定性</title>
     <link>http://localhost:1313/tags/%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7/</link>
     <pubDate>Mon, 05 Jan 2026 00:00:00 &#43;0000</pubDate>
@@ -42,46 +82,6 @@
     <pubDate>Sun, 10 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>ruanrui@cufe.edu.cn (阮睿)</author>
     <guid>http://localhost:1313/tags/%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>积极财政政策</title>
-    <link>http://localhost:1313/tags/%E7%A7%AF%E6%9E%81%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96/</link>
-    <pubDate>Tue, 25 Mar 2025 23:47:35 &#43;0000</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/tags/%E7%A7%AF%E6%9E%81%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>高质量发展</title>
-    <link>http://localhost:1313/tags/%E9%AB%98%E8%B4%A8%E9%87%8F%E5%8F%91%E5%B1%95/</link>
-    <pubDate>Tue, 25 Mar 2025 23:47:35 &#43;0000</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/tags/%E9%AB%98%E8%B4%A8%E9%87%8F%E5%8F%91%E5%B1%95/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>信用利差</title>
-    <link>http://localhost:1313/tags/%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</link>
-    <pubDate>Tue, 25 Mar 2025 12:06:13 &#43;0800</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/tags/%E4%BF%A1%E7%94%A8%E5%88%A9%E5%B7%AE/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>地方债</title>
-    <link>http://localhost:1313/tags/%E5%9C%B0%E6%96%B9%E5%80%BA/</link>
-    <pubDate>Tue, 25 Mar 2025 12:06:13 &#43;0800</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/tags/%E5%9C%B0%E6%96%B9%E5%80%BA/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>绩效管理</title>
-    <link>http://localhost:1313/tags/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/</link>
-    <pubDate>Tue, 25 Mar 2025 12:06:13 &#43;0800</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/tags/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
