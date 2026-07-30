@@ -32,7 +32,10 @@
                     {{- with .Page -}}
                         {{- $url = .RelPermalink -}}
                     {{- end -}}
-                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    {{- $navName := .Identifier -}}
+                    {{- if eq .Identifier "research_topics" -}}{{ $navName = "research" }}{{ end -}}
+                    {{- if eq .Identifier "courses" -}}{{ $navName = "teaching" }}{{ end -}}
+                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" data-nav="{{ $navName }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
                         {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                     </a>
                 {{- end -}}
@@ -112,9 +115,9 @@
                     {{- end -}}
                 </a>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
+            <button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="打开导航菜单" aria-controls="menu-mobile" aria-expanded="false">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
         </div>
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
@@ -142,7 +145,10 @@
                 {{- with .Page -}}
                     {{- $url = .RelPermalink -}}
                 {{- end -}}
-                <a class="menu-item" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                {{- $navName := .Identifier -}}
+                {{- if eq .Identifier "research_topics" -}}{{ $navName = "research" }}{{ end -}}
+                {{- if eq .Identifier "courses" -}}{{ $navName = "teaching" }}{{ end -}}
+                <a class="menu-item" data-nav="{{ $navName }}" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
                     {{- .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML -}}
                 </a>
             {{- end -}}
@@ -175,6 +181,25 @@
         </div>
     </div>
 </header>
+<script id="mobile-menu-state-sync">
+    (() => {
+        const toggle = document.getElementById('menu-toggle-mobile');
+        if (!toggle) return;
+        const syncState = () => {
+            const expanded = toggle.classList.contains('active');
+            toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+            toggle.setAttribute('aria-label', expanded ? '关闭导航菜单' : '打开导航菜单');
+        };
+        toggle.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggle.click();
+            }
+        });
+        syncState();
+        new MutationObserver(syncState).observe(toggle, { attributes: true, attributeFilter: ['class'] });
+    })();
+</script>
 
 {{- if .Site.Params.search.enable -}}
     <div class="search-dropdown desktop">

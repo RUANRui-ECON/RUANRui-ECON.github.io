@@ -3,6 +3,8 @@ title: "New event and old antidote: Can ex-ante disclosure mitigate regulatory r
 subtitle: Journal of Corporate Finance, 2026年第3期
 date: 2026-01-05
 draft: false
+featured: true
+featuredWeight: 1
 author: 李孜仪 阮睿 孙宇辰 唐悦
 summary: 在不确定性的时代，沉默的代价远高于真话的风险。市场记得谁选择了坦诚，也会用更低的融资成本和更稳定的估值来回报透明度。
 categories: ["科学研究"]

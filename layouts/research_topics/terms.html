@@ -5,42 +5,55 @@
 {{- define "content" -}}
     {{- $terms := .Data.Terms.ByCount -}}
     {{- $type := .Type -}}
+    {{- $posts := where .Site.RegularPages "Type" "posts" -}}
+    {{- $featured := where $posts "Params.featured" true -}}
+    {{- $featured = sort $featured "Params.featuredWeight" "asc" -}}
 
-    <div class="page archive">
-        {{- /* Title */ -}}
-        <h2 class="single-title animate__animated animate__pulse animate__faster">
-            {{- .Params.Title | default "科学研究" -}}
-        </h2>
+    <div class="page archive research-page">
+        <header class="research-intro">
+            <h1>研究方向</h1>
+            <p>聚焦宏观政策沟通、企业预期与财政治理，研究政策信号如何影响微观主体与地方政府的行为。</p>
+        </header>
 
-        {{- /* Research Topics Display */ -}}
-        <div class="categories-card">
-            {{- range $terms -}}
-                {{- $term := .Term -}}
-                {{- $pages := .Pages -}}
-                {{- with $.Site.GetPage "taxonomy" (printf "%v/%v" $type $term) -}}
-                <div class="card-item">
-                    <div class="card-item-wrapper">
-                        <h3 class="card-item-title">
-                            <a href="{{ .RelPermalink }}">
-                                <i class="fas fa-book fa-fw" aria-hidden="true"></i>&nbsp;{{ .Page.Title }}
-                            </a>
-                        </h3>
-                        {{- range first 10 $pages -}}
-                            <article class="archive-item">
-                                <a href="{{ .RelPermalink }}" class="archive-item-link">
-                                    {{- .Title | emojify -}}
-                                </a>
-                            </article>
-                        {{- end -}}
-                        {{- if gt (len $pages) 10 -}}
-                            <span class="more-post">
-                                <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
-                            </span>
-                        {{- end -}}
-                    </div>
+        {{- with $featured -}}
+            <section class="research-featured" aria-labelledby="research-featured-title">
+                <div class="featured-research-heading">
+                    <h2 id="research-featured-title">代表性研究</h2>
                 </div>
+                <div class="paper-grid">
+                    {{- range . -}}
+                        {{- partial "research/paper-card.html" (dict "Page" .) -}}
+                    {{- end -}}
+                </div>
+            </section>
+        {{- end -}}
+
+        <section class="research-topic-section" aria-labelledby="research-topic-title">
+            <div class="research-topic-heading">
+                <h2 id="research-topic-title">按主题浏览</h2>
+            </div>
+            <div class="research-topic-grid">
+                {{- range $terms -}}
+                    {{- $term := .Term -}}
+                    {{- $pages := .Pages -}}
+                    {{- with $.Site.GetPage "taxonomy" (printf "%v/%v" $type $term) -}}
+                        <article class="research-topic-card">
+                            <h3>
+                                <a href="{{ .RelPermalink }}">{{ .Page.Title }}</a>
+                            </h3>
+                            <ul>
+                                {{- range first 10 $pages -}}
+                                    {{- $displayTitle := strings.TrimPrefix "长摘要-" .Title -}}
+                                    <li><a href="{{ .RelPermalink }}">{{ $displayTitle | emojify }}</a></li>
+                                {{- end -}}
+                            </ul>
+                            {{- if gt (len $pages) 10 -}}
+                                <a href="{{ .RelPermalink }}" class="research-topic-more">{{ T "more" }} &rarr;</a>
+                            {{- end -}}
+                        </article>
+                    {{- end -}}
                 {{- end -}}
-            {{- end -}}
-        </div>
+            </div>
+        </section>
     </div>
 {{- end -}}

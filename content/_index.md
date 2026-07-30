@@ -1,4 +1,4 @@
-<div style="text-align: left; max-width: 600px; margin: 0 auto;">
+<div class="home-contact">
 
 **邮箱地址：** [ruanrui@cufe.edu.cn](mailto:ruanrui@cufe.edu.cn)
 
