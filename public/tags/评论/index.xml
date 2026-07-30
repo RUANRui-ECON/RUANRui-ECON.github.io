@@ -1,16 +1,2 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>评论 - Tag - 阮睿的个人主页</title>
-        <link>http://localhost:1313/tags/%E8%AF%84%E8%AE%BA/</link>
-        <description>评论 - Tag - 阮睿的个人主页</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
-            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Sun, 05 Apr 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AF%84%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
-    <title>张雪和张雪峰</title>
-    <link>http://localhost:1313/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</link>
-    <pubDate>Sun, 05 Apr 2026 00:00:00 &#43;0000</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</guid>
-    <description><![CDATA[同一个星期，两个张雪 2026年3月的最后一周，中国社交媒体上同时出现两条热搜。3月24日，考研辅导名师张雪峰在苏州因心源性猝死离世，年仅41]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>评论 - Tag - 阮睿的个人主页</title><link>https://ruanrui.com.cn/tags/%E8%AF%84%E8%AE%BA/</link><description>评论 - Tag - 阮睿的个人主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor><webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ruanrui.com.cn/tags/%E8%AF%84%E8%AE%BA/" rel="self" type="application/rss+xml"/><item><title>张雪和张雪峰</title><link>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</link><pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate><author>ruanrui@cufe.edu.cn (阮睿)</author><guid>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</guid><description>&lt;h1 id="同一个星期两个张雪">同一个星期，两个张雪&lt;/h1>
+&lt;p>2026年3月的最后一周，中国社交媒体上同时出现两条热搜。3月24日，考研辅导名师张雪峰在苏州因心源性猝死离世，年仅41岁；3月28至29日，湖南人张雪创立的摩托车品牌在葡萄牙波尔蒂芒赛道连夺世界超级摩托车锦标赛两回合冠军，打破了欧美日车队37年的垄断。一个人的骤然离去和另一个人的横空出世，在同一周交替刷屏。&lt;/p></description></item></channel></rss>

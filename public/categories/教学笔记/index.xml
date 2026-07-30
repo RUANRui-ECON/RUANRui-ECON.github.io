@@ -1,24 +1,2 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>教学笔记 - Category - 阮睿的个人主页</title>
-        <link>http://localhost:1313/categories/%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
-        <description>教学笔记 - Category - 阮睿的个人主页</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
-            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
-    <title>研究的道</title>
-    <link>http://localhost:1313/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</link>
-    <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</guid>
-    <description><![CDATA[研究的道是很简单的，只有两点，一是实事求是，二是遵从内心。 不管是本科生，还是博士，要做什么样的事情？——要做那些，别人看到了以后，会说一句“]]></description>
-</item>
-<item>
-    <title>异质性、机制和渠道的辨析</title>
-    <link>http://localhost:1313/posts/%E5%BC%82%E8%B4%A8%E6%80%A7%E6%9C%BA%E5%88%B6%E5%92%8C%E6%B8%A0%E9%81%93%E7%9A%84%E8%BE%A8%E6%9E%90/</link>
-    <pubDate>Mon, 29 Dec 2025 00:00:00 &#43;0000</pubDate>
-    <author>ruanrui@cufe.edu.cn (阮睿)</author>
-    <guid>http://localhost:1313/posts/%E5%BC%82%E8%B4%A8%E6%80%A7%E6%9C%BA%E5%88%B6%E5%92%8C%E6%B8%A0%E9%81%93%E7%9A%84%E8%BE%A8%E6%9E%90/</guid>
-    <description><![CDATA[实证研究中，&ldquo;渠道&quot;&ldquo;机制&quot;和&quot;异质性&quot;这三个概念经常被混用，但它们的含义和]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>教学笔记 - Category - 阮睿的个人主页</title><link>https://ruanrui.com.cn/categories/%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B0/</link><description>教学笔记 - Category - 阮睿的个人主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor><webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ruanrui.com.cn/categories/%E6%95%99%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml"/><item><title>研究的道</title><link>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</link><pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate><author>ruanrui@cufe.edu.cn (阮睿)</author><guid>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</guid><description>&lt;p>研究的道是很简单的，只有两点，一是实事求是，二是遵从内心。&lt;/p>
+&lt;p>不管是本科生，还是博士，要做什么样的事情？——要做那些，别人看到了以后，会说一句“是个狠人”的事情。&lt;/p></description></item><item><title>异质性、机制和渠道的辨析</title><link>https://ruanrui.com.cn/posts/%E5%BC%82%E8%B4%A8%E6%80%A7%E6%9C%BA%E5%88%B6%E5%92%8C%E6%B8%A0%E9%81%93%E7%9A%84%E8%BE%A8%E6%9E%90/</link><pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate><author>ruanrui@cufe.edu.cn (阮睿)</author><guid>https://ruanrui.com.cn/posts/%E5%BC%82%E8%B4%A8%E6%80%A7%E6%9C%BA%E5%88%B6%E5%92%8C%E6%B8%A0%E9%81%93%E7%9A%84%E8%BE%A8%E6%9E%90/</guid><description><![CDATA[<p>实证研究中，&ldquo;渠道&quot;&ldquo;机制&quot;和&quot;异质性&quot;这三个概念经常被混用，但它们的含义和功能存在明显差异。理解这些差异对于设计合理的实证策略至关重要。</p>]]></description></item></channel></rss>
