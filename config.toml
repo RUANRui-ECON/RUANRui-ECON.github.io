@@ -45,7 +45,7 @@ hasCJKLanguage = true
     [params.home.profile]
       enable = true
       gravatarEmail = ""
-      avatarURL = "/images/rr2.jpeg"
+      avatarURL = "/images/rr2.jpg"
       title = "阮睿"
       subtitle = "长聘副教授，博士生导师"
       subtitle2 = "中央财经大学中国财政发展协同创新中心"
