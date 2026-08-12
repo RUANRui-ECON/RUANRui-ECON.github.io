@@ -597,6 +597,11 @@ button:focus-visible,
   overflow-wrap: anywhere;
 }
 
+.academic-article .content > h2 > .header-mark::before {
+  content: none;
+  margin-right: 0;
+}
+
 @media (max-width: 900px) {
   .academic-hero {
     grid-template-columns: 1fr;
