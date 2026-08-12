@@ -1,3 +1,42 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>其他 - courses - 阮睿的个人主页</title><link>https://ruanrui.com.cn/courses/%E5%85%B6%E4%BB%96/</link><description>其他 - courses - 阮睿的个人主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor><webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ruanrui.com.cn/courses/%E5%85%B6%E4%BB%96/" rel="self" type="application/rss+xml"/><item><title>张雪和张雪峰</title><link>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</link><pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate><author>ruanrui@cufe.edu.cn (阮睿)</author><guid>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</guid><description>&lt;h1 id="同一个星期两个张雪">同一个星期，两个张雪&lt;/h1>
-&lt;p>2026年3月的最后一周，中国社交媒体上同时出现两条热搜。3月24日，考研辅导名师张雪峰在苏州因心源性猝死离世，年仅41岁；3月28至29日，湖南人张雪创立的摩托车品牌在葡萄牙波尔蒂芒赛道连夺世界超级摩托车锦标赛两回合冠军，打破了欧美日车队37年的垄断。一个人的骤然离去和另一个人的横空出世，在同一周交替刷屏。&lt;/p></description></item><item><title>研究的道</title><link>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</link><pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate><author>ruanrui@cufe.edu.cn (阮睿)</author><guid>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</guid><description>&lt;p>研究的道是很简单的，只有两点，一是实事求是，二是遵从内心。&lt;/p>
-&lt;p>不管是本科生，还是博士，要做什么样的事情？——要做那些，别人看到了以后，会说一句“是个狠人”的事情。&lt;/p></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>其他 - courses - 阮睿的个人主页</title>
+        <link>https://ruanrui.com.cn/courses/%E5%85%B6%E4%BB%96/</link>
+        <description>其他 - courses - 阮睿的个人主页</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ruanrui@cufe.edu.cn (阮睿)</managingEditor>
+            <webMaster>ruanrui@cufe.edu.cn (阮睿)</webMaster><lastBuildDate>Wed, 12 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ruanrui.com.cn/courses/%E5%85%B6%E4%BB%96/" rel="self" type="application/rss+xml" /><item>
+    <title>关于使用 AI 的两点提醒</title>
+    <link>https://ruanrui.com.cn/posts/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8-ai-%E7%9A%84%E4%B8%A4%E7%82%B9%E6%8F%90%E9%86%92/</link>
+    <pubDate>Wed, 12 Aug 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>https://ruanrui.com.cn/posts/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8-ai-%E7%9A%84%E4%B8%A4%E7%82%B9%E6%8F%90%E9%86%92/</guid>
+    <description><![CDATA[Attention is all you need, Context is everything.]]></description>
+</item>
+<item>
+    <title>为未来下注：写给本科生的一些话</title>
+    <link>https://ruanrui.com.cn/posts/%E4%B8%BA%E6%9C%AA%E6%9D%A5%E4%B8%8B%E6%B3%A8%E5%86%99%E7%BB%99%E6%9C%AC%E7%A7%91%E7%94%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%9D/</link>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>https://ruanrui.com.cn/posts/%E4%B8%BA%E6%9C%AA%E6%9D%A5%E4%B8%8B%E6%B3%A8%E5%86%99%E7%BB%99%E6%9C%AC%E7%A7%91%E7%94%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%9D/</guid>
+    <description><![CDATA[本科阶段最重要的，不是尽早把自己锁定在一条看似确定的道路上，而是不断探索、积累能力、扩大自己的机会集合，并保留在未来出现新机会时为之下注的能力和勇气。]]></description>
+</item>
+<item>
+    <title>张雪和张雪峰</title>
+    <link>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</link>
+    <pubDate>Sun, 05 Apr 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>https://ruanrui.com.cn/posts/%E5%BC%A0%E9%9B%AA%E5%92%8C%E5%BC%A0%E9%9B%AA%E5%B3%B0/two_zhang_xue/</guid>
+    <description><![CDATA[<h1 id="同一个星期两个张雪">同一个星期，两个张雪</h1>
+<p>2026年3月的最后一周，中国社交媒体上同时出现两条热搜。3月24日，考研辅导名师张雪峰在苏州因心源性猝死离世，年仅41岁；3月28至29日，湖南人张雪创立的摩托车品牌在葡萄牙波尔蒂芒赛道连夺世界超级摩托车锦标赛两回合冠军，打破了欧美日车队37年的垄断。一个人的骤然离去和另一个人的横空出世，在同一周交替刷屏。</p>]]></description>
+</item>
+<item>
+    <title>研究的道</title>
+    <link>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</link>
+    <pubDate>Thu, 02 Apr 2026 00:00:00 &#43;0000</pubDate>
+    <author>ruanrui@cufe.edu.cn (阮睿)</author>
+    <guid>https://ruanrui.com.cn/posts/%E5%AF%B9%E5%AD%A6%E7%94%9F%E8%AF%B4%E7%9A%84%E8%AF%9D/</guid>
+    <description><![CDATA[<p>研究的道是很简单的，只有两点，一是实事求是，二是遵从内心。</p>
+<p>不管是本科生，还是博士，要做什么样的事情？——要做那些，别人看到了以后，会说一句“是个狠人”的事情。</p>]]></description>
+</item>
+</channel>
+</rss>

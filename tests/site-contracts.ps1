@@ -248,6 +248,7 @@ function Test-Research {
 
 function Test-About {
   $about = Read-Built 'about/index.html'
+  $style = Read-Built 'css\style.min.css'
   Assert-True ($about -match 'class="about-layout"') 'about page must use custom layout'
   Assert-True ($about -match 'class="about-toc"') 'about page must expose section navigation'
   $main = [regex]::Match($about, '<main.*?</main>', 'Singleline').Value
@@ -258,6 +259,7 @@ function Test-About {
   $updatedLabel = Convert-CodePoints @(0x66F4, 0x65B0, 0x65F6, 0x95F4)
   Assert-True ($main -match ('<h3 id="' + $updatedLabel + '">' + $updatedLabel + '</h3>')) 'about update time must be an h3'
   Assert-True ($main -notmatch ('<h4 id="' + $updatedLabel + '">' + $updatedLabel + '</h4>')) 'about update time must not be an h4'
+  Assert-True ($style -match '\.page\.single \.about-content>h2>\.header-mark:{1,2}before\{content:none\s*!important;margin-right:0\}') 'about h2 anchor marker override must defeat theme decoration'
 
   $post = Read-Built 'posts/new-event-and-old-antidote/index.html'
   Assert-True ($post -match 'class="page single academic-article') 'posts must use academic reading layout'
@@ -274,7 +276,7 @@ function Test-PostHeadings {
 
   Assert-True ($toc -match 'href="#[^"]*attention-is-all-you-need"') 'post toc must include level-one content headings'
   Assert-True ($toc -match 'href="#1-ai-[^"]+"') 'post toc must retain nested level-two headings'
-  Assert-True ($style -match '\.academic-article \.content>h2>\.header-mark:{1,2}before\{content:none;margin-right:0\}') 'post h2 anchor marker must not render a decorative hash'
+  Assert-True ($style -match '\.page\.single\.academic-article \.content>h2>\.header-mark:{1,2}before\{content:none\s*!important;margin-right:0\}') 'post h2 anchor marker override must defeat theme decoration'
 }
 
 $exitCode = 0

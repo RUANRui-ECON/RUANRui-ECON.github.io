@@ -597,8 +597,14 @@ button:focus-visible,
   overflow-wrap: anywhere;
 }
 
-.academic-article .content > h2 > .header-mark::before {
-  content: none;
+// Remove the theme's decorative hash from level-two headings in custom layouts.
+.page.single.academic-article .content > h2 > .header-mark::before {
+  content: none !important;
+  margin-right: 0;
+}
+
+.page.single .about-content > h2 > .header-mark::before {
+  content: none !important;
   margin-right: 0;
 }
 
